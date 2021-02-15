@@ -2,7 +2,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const useStyles = makeStyles({
   appBarStyle: {
@@ -18,6 +18,14 @@ const useStyles = makeStyles({
     margin: "25px",
     textDecoration: "None",
     color: "#FFFAFF",
+    "&:hover": {
+      borderBottom: "4px solid #30BCED",
+      paddingBottom: "8px",
+    },
+  },
+  linkActive: {
+    borderBottom: "4px solid #30BCED",
+    paddingBottom: "8px",
   },
 });
 
@@ -28,14 +36,24 @@ const Navbar = () => {
     <AppBar className={classes.appBarStyle} position="static" elevation="0">
       <Toolbar className={classes.toolbarStyle}>
         <Typography>
-          <Link className={classes.links} to="/">
+          <NavLink
+            exact
+            className={classes.links}
+            activeClassName={classes.linkActive}
+            to="/"
+          >
             Home
-          </Link>
+          </NavLink>
         </Typography>
         <Typography>
-          <Link className={classes.links} to="/About">
+          <NavLink
+            exact
+            className={classes.links}
+            activeClassName={classes.linkActive}
+            to="/About"
+          >
             About
-          </Link>
+          </NavLink>
         </Typography>
         <Typography>
           <Link className={classes.links} to="/Work">
