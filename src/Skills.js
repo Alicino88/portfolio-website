@@ -1,6 +1,11 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Javascript from "/public/skillsIcons/javascript.png";
+import Javascript from "./images/javascript.png";
+import Html from "./images/html5.png";
+import css from "./images/css.png";
+import react from "./images/react.png";
+import vue from "./images/vue.png";
+import photoshop from "./images/photoshop.png";
 
 const useStyles = makeStyles({
   skillsContainer: {
@@ -10,7 +15,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
   },
   skillsList: {
-    width: "70vw",
+    width: "65vw",
     display: "flex",
     justifyContent: "space-around",
     listStyle: "none",
@@ -24,13 +29,23 @@ const Skills = () => {
     <div className={classes.skillsContainer}>
       <ul className={classes.skillsList}>
         <li>
-          <img scr={Javascript} alt="javascript icon" />
+          <img src={Javascript} alt="javascript icon" width="50px" />
         </li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>React</li>
-        <li>Vue</li>
-        <li>Photoshop</li>
+        <li>
+          <img src={Html} alt="HTML icon" width="50px" />
+        </li>
+        <li>
+          <img src={css} alt="css icon" width="50px" />
+        </li>
+        <li>
+          <img src={react} alt="react icon" width="50px" />
+        </li>
+        <li>
+          <img src={vue} alt="vue icon" width="50px" />
+        </li>
+        <li>
+          <img src={photoshop} alt="photoshop icon" width="50px" />
+        </li>
       </ul>
     </div>
   );
