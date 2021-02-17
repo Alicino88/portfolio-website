@@ -1,5 +1,7 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import Picture from "./images/Alice.jpg";
 
 const useStyles = makeStyles({
   quoteContainer: {
@@ -7,13 +9,20 @@ const useStyles = makeStyles({
     color: "#FFFAFF",
     height: "auto",
     display: "flex",
-    justifyContent: "center",
     alignItems: "center,",
   },
   textContainer: {
-    padding: "140px",
+    padding: "160px 140px 140px 90px",
+    width: "70vw",
+    display: "flex",
+    flexDirection: "column",
   },
 
+  imageContainer: {
+    width: "30vw",
+  },
+
+  /*
   quotes: {
     position: "relative",
     height: "auto",
@@ -31,9 +40,32 @@ const useStyles = makeStyles({
       opacity: "0.5",
     },
   },
+  /*
   author: {
     textAlign: "right",
     color: "#30BCED",
+  },
+  */
+
+  textStyle: {
+    borderLeft: "4px solid #30BCED",
+    paddingLeft: "10px",
+  },
+
+  imageStyle: {
+    backgroundPosition: "center",
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+  },
+  buttonContainer: {
+    paddingTop: "30px",
+  },
+  buttonStyle: {
+    padding: "10px",
+    color: "#30BCED",
+    borderColor: "#30BCED",
+    border: "2px solid #30BCED",
   },
 });
 
@@ -42,16 +74,23 @@ const Quote = () => {
   return (
     <div className={classes.quoteContainer}>
       <div className={classes.textContainer}>
-        <Typography className={classes.quotes} variant="h5" component="h3">
-          Digital design is like painting, except the paint never dries.
+        <Typography className={classes.textStyle} variant="h5" component="h3">
+          I love frontend development as it allows me to use both analytical and
+          creative skills.
         </Typography>
-        <Typography
-          className={classes.author}
-          variant="subtitle1"
-          component="h3"
-        >
-          -Neville Brody
-        </Typography>
+        <div className={classes.buttonContainer}>
+          <Button
+            variant="outlined"
+            className={classes.buttonStyle}
+            disableElevation
+            disableRipple
+          >
+            See full resume
+          </Button>
+        </div>
+      </div>
+      <div className={classes.imageContainer}>
+        <img src={Picture} className={classes.imageStyle} alt="Alice Moretti" />
       </div>
     </div>
   );
