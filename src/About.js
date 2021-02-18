@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import AboutHeader from "./AboutHeader.js";
+import Header from "./Header.js";
 import AboutText from "./AboutText.js";
 import Quote from "./Quote.js";
 import Skills from "./Skills.js";
@@ -22,7 +22,7 @@ const About = () => {
   const classes = useStyles();
   return (
     <div>
-      <AboutHeader />
+      <Header title={"About"} />
       <AboutText />
       <Quote />
       <Skills />
