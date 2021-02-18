@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Home from "./Home.js";
 import About from "./About.js";
+import Work from "./Work.js";
 import { Route } from "react-router-dom";
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
         </Route>
         <Route exact path="/About">
           <About />
+        </Route>
+        <Route exact path="/Work">
+          <Work />
         </Route>
       </div>
     </div>

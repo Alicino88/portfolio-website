@@ -50,15 +50,21 @@ const Navbar = () => {
             exact
             className={classes.links}
             activeClassName={classes.linkActive}
+            /*when the link is equal to the path in the app component then the component is rendered*/
             to="/About"
           >
             About
           </NavLink>
         </Typography>
         <Typography>
-          <Link className={classes.links} to="/Work">
+          <NavLink
+            exact
+            className={classes.links}
+            activeClassName={classes.linkActive}
+            to="/Work"
+          >
             Work
-          </Link>
+          </NavLink>
         </Typography>
         <Typography>
           <Link className={classes.links} to="/Contact">
