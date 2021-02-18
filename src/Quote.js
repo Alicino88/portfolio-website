@@ -2,6 +2,7 @@ import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Picture from "./images/Alice.jpg";
+import Curriculum from "./images/CV_Alice_Moretti.pdf";
 
 const useStyles = makeStyles({
   quoteContainer: {
@@ -64,8 +65,10 @@ const useStyles = makeStyles({
   buttonStyle: {
     padding: "10px",
     color: "#30BCED",
-    borderColor: "#30BCED",
     border: "2px solid #30BCED",
+    "&:hover": {
+      backgroundColor: "hsla(0, 0%, 13%, 0.76)",
+    },
   },
 });
 
@@ -79,14 +82,16 @@ const Quote = () => {
           creative skills.
         </Typography>
         <div className={classes.buttonContainer}>
-          <Button
-            variant="outlined"
-            className={classes.buttonStyle}
-            disableElevation
-            disableRipple
-          >
-            See full resume
-          </Button>
+          <a href={Curriculum} rel="noopener noreferrer" target="_blank">
+            <Button
+              variant="outlined"
+              className={classes.buttonStyle}
+              disableElevation
+              disableRipple
+            >
+              See full resume
+            </Button>
+          </a>
         </div>
       </div>
       <div className={classes.imageContainer}>

@@ -14,6 +14,12 @@ const useStyles = makeStyles({
     height: "auto",
     padding: "90px",
   },
+
+  iconStyle: {
+    "&:hover": {
+      width: "60px",
+    },
+  },
 });
 
 const Skills = () => {
@@ -25,19 +31,24 @@ const Skills = () => {
           <img src={Javascript} alt="javascript icon" width="50px" />
         </Grid>
         <Grid item xs={12} md={1}>
-          <img src={Html} alt="HTML icon" width="50px" />
+          <img
+            src={Html}
+            alt="HTML icon"
+            className={classes.iconStyle}
+            width="45px"
+          />
         </Grid>
         <Grid item xs={12} md={1}>
-          <img src={css} alt="css icon" width="50px" />
+          <img src={css} alt="css icon" width="45px" />
         </Grid>
         <Grid item xs={12} md={1}>
-          <img src={react} alt="react icon" width="50px" />
+          <img src={react} alt="react icon" width="45px" />
         </Grid>
         <Grid item xs={12} md={1}>
-          <img src={vue} alt="vue icon" width="50px" />
+          <img src={vue} alt="vue icon" width="45px" />
         </Grid>
         <Grid item xs={12} md={1}>
-          <img src={photoshop} alt="photoshop icon" width="50px" />
+          <img src={photoshop} alt="photoshop icon" width="45px" />
         </Grid>
       </Grid>
     </div>
