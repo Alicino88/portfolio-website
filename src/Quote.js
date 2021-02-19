@@ -67,7 +67,7 @@ const useStyles = makeStyles({
     color: "#30BCED",
     border: "2px solid #30BCED",
     "&:hover": {
-      backgroundColor: "hsla(0, 0%, 13%, 0.76)",
+      backgroundColor: "hsla(0, 0%, 13%, 1)",
     },
   },
 });
