@@ -2,8 +2,8 @@ import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Header from "./Header.js";
 import SingleProject from "./SingleProject.js";
-import Truemed from "./images/truemed1.png";
-import Users from "./images/react_users.png";
+import Truemed from "./images/truemed3.png";
+import Users from "./images/react_users1.png";
 import Lando from "./images/lando.png";
 import Crostata from "./images/crostata.png";
 

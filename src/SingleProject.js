@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   pictureContainerBlue: {
     width: "40vw",
+    height: "350px",
     position: "relative",
     "&::before": {
       content: "''",
@@ -12,6 +13,7 @@ const useStyles = makeStyles({
       position: "absolute",
       width: "100%",
       height: "100%",
+      transition: "background 1s",
     },
     "&:hover::before": {
       background: "none",
@@ -19,6 +21,7 @@ const useStyles = makeStyles({
   },
   pictureContainerGrey: {
     width: "40vw",
+    height: "350px",
     position: "relative",
     "&::before": {
       content: "''",
@@ -27,6 +30,7 @@ const useStyles = makeStyles({
       position: "absolute",
       width: "100%",
       height: "100%",
+      transition: "background 1s",
     },
     "&:hover::before": {
       background: "none",
@@ -101,6 +105,7 @@ const Singleproject = ({
       <div
         style={{
           width: "60vw",
+          height: "350px",
           padding: "90px 0 90px 90px",
           display: "flex",
           alignItems: "center",
