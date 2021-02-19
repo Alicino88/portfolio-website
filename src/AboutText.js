@@ -36,11 +36,10 @@ const AboutText = () => {
     <div className={classes.backgroundPicture}>
       <div className={classes.textContainer}>
         <Typography variant="h4" color="h2" style={{ marginBottom: "30px" }}>
-          The great beginnins...How I have decided i wanted to be a frontend
-          developer
+          How I have decided I wanted to become a frontend developer
         </Typography>
         <Typography variant="h5" component="h2">
-          For several years I have been working as a digital marketer and
+          For several years, I have been working as a digital marketer and
           copywriter, first in Italy (where I am originally from) and then in
           Finland, where now I have been living for five years. For some reason,
           I always felt that my career was missing something and that I wanted
@@ -57,9 +56,7 @@ const AboutText = () => {
           at home with my son Tomas I found balance between changing diapers,
           surviving the Finnish winter, and keep my mental health. I completed
           two online certifications and the more I was coding the more I knew
-          that that was going to be my future working life.' I love coding for
-          frontend as it gives me the chance to be creative while using my
-          analitical and scientific approach to things.
+          that that was going to be my future working life.
         </Typography>
       </div>
     </div>
