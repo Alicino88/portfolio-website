@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Home from "./Home.js";
 import About from "./About.js";
 import Work from "./Work.js";
+import Contact from "./Contact.js";
 import { Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route exact path="/Work">
           <Work />
+        </Route>
+        <Route exact path="/Contact">
+          <Contact />
         </Route>
       </div>
     </div>

@@ -67,9 +67,14 @@ const Navbar = () => {
           </NavLink>
         </Typography>
         <Typography>
-          <Link className={classes.links} to="/Contact">
+          <NavLink
+            exact
+            className={classes.links}
+            activeClassName={classes.linkActive}
+            to="/Contact"
+          >
             Contact
-          </Link>
+          </NavLink>
         </Typography>
       </Toolbar>
     </AppBar>
