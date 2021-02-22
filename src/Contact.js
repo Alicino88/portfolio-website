@@ -1,31 +1,40 @@
-import { Typography } from "@material-ui/core";
+import { TextareaAutosize, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
 import Header from "./Header.js";
-import React, { useState } from "react";
 
 const useStyles = makeStyles({
   background: {
     background: "#303036",
     color: "#FFFAFF",
     padding: "90px 0px 0px 90px",
+    height: "100vh",
+  },
+
+  formStyle: {
+    width: "60vw",
+  },
+
+  nameAndEmailContainer: {
+    width: "50%",
+    float: "left",
+  },
+
+  nameAndEmailWidth: {
+    width: "100%",
+  },
+
+  labelStyle: {
+    display: "block",
+  },
+
+  textAreaWidth: {
+    width: "100%",
   },
 });
 
-const Contact = () => {
+const Contact = (Name) => {
   const classes = useStyles();
-  const [submitting, setSubmitting] = useState(false);
-
-  //To prevent the page from being completely reloaded after pressing the submit button I use preventDefault method
-  //user clicks on submit button, setSubmitting runs and sets submitting to true, the message is then displayed.
-  //To achieve this behaviour I use useState hook which creates reactive variable.
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setSubmitting(true);
-
-    setTimeout(() => {
-      setSubmitting(false);
-    }, 3000);
-  };
   return (
     <div>
       <Header title={"Contact"} />
@@ -33,24 +42,51 @@ const Contact = () => {
         <Typography variant="h5" component="h2">
           Would you like to connect?
         </Typography>
-        {/*when submitting is true the message is displayed*/}
-        {submitting && <div>Submtting Form...</div>}
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-            <label>
-              <p>Name</p>
-              <input name="name" />
+
+        <form className={classes.formStyle}>
+          {/*for attribute on the label and id attribute on input must be the same to bind them together
+            name attribute on the input field is necessary for the information to be sent*/}
+
+          <div className={classes.nameAndEmailContainer}>
+            <label className={classes.labelStyle} for="name">
+              Name
             </label>
-            <label>
-              <p>Email</p>
-              <input type="email" />
+            <input
+              className={classes.nameAndEmailWidth}
+              type="text"
+              id="name"
+              name="name"
+            ></input>
+          </div>
+          <div className={classes.nameAndEmailContainer}>
+            <label className={classes.labelStyle} for="email">
+              Email
             </label>
-            <label>
-              <p>Message</p>
-              <input type="type=" text />
+            <input
+              className={classes.nameAndEmailWidth}
+              type="email"
+              id="email"
+              name="email"
+            ></input>
+          </div>
+
+          <div>
+            <label className={classes.labelStyle} for="message">
+              Message
             </label>
-            <button type="submit">Submit</button>
-          </fieldset>
+
+            <textarea
+              className={classes.textAreaWidth}
+              type="text"
+              id="message"
+              name="message"
+            ></textarea>
+          </div>
+          <div>
+            <button type="submit" form="form1" value="Submit">
+              Send message
+            </button>
+          </div>
         </form>
       </div>
     </div>

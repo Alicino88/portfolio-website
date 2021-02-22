@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     position: "relative",
     "&::before": {
       content: "''",
-      background: "hsla(201, 48%, 77%, 1)",
+      background: "hsla(196, 31%, 14%, 1)",
       opacity: "0.7",
       position: "absolute",
       width: "100%",
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     position: "relative",
     "&::before": {
       content: "''",
-      background: "hsla(240, 4%, 17%, 1)",
+      background: "hsla(196, 31%, 14%, 1)",
       opacity: "0.7",
       position: "absolute",
       width: "100%",

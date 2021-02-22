@@ -42,7 +42,6 @@ const Work = () => {
         picture={Lando}
         whiteBackground
         greyText
-        pictureBlue
         pictureLink={"https://codepen.io/Alicinetto/full/VweyBgv"}
         text="I love coding landing pages, it's fun and allows you to think also
       from a digital marketing perspective: how to grasp the attention of the reader? How to
