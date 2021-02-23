@@ -95,10 +95,12 @@ const Contact = (Name) => {
           method="POST"
           data-netlify="true"
         >
+          {/*This hidden input is part of adding a static html file to index.html to make Netlify form work with react
+        The value is the same as the form name*/}
           <input type="hidden" name="form-name" value="contact" />
+
           {/*for attribute on the label and id attribute on input must be the same to bind them together
             name attribute on the input field is necessary for the information to be sent*/}
-
           <div
             className={classes.nameAndEmailContainer}
             style={{ paddingRight: "20px", marginBottom: "50px" }}
