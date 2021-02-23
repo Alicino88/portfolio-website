@@ -141,12 +141,7 @@ const Contact = (Name) => {
             ></textarea>
           </div>
           <div className={classes.buttonContainer}>
-            <button
-              className={classes.buttonStyle}
-              type="submit"
-              form="form1"
-              value="Submit"
-            >
+            <button className={classes.buttonStyle} type="submit">
               Send message
             </button>
           </div>
