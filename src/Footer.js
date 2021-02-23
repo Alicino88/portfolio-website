@@ -2,6 +2,7 @@ import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles({
   footerStyle: {
@@ -20,12 +21,19 @@ const useStyles = makeStyles({
     listStyle: "none",
     padding: "10px 0 40px 0",
   },
+  dividerStyle: {
+    background: "#30BCED",
+    height: "3px",
+    marginBottom: "20px",
+    marginRight: "90px",
+  },
 });
 
 const Footer = () => {
   const classes = useStyles();
   return (
     <footer className={classes.footerStyle}>
+      <Divider className={classes.dividerStyle} />
       <div>
         <ul className={classes.iconsStyle}>
           <li>
