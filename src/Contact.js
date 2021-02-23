@@ -5,8 +5,8 @@ import Header from "./Header.js";
 
 const useStyles = makeStyles({
   background: {
-    background: "#303036",
-    color: "#FFFAFF",
+    background: "#FFFAFF",
+    color: "#050401",
     padding: "90px 90px 0px 90px",
     height: "100vh",
   },
@@ -25,10 +25,11 @@ const useStyles = makeStyles({
   nameAndEmailStyle: {
     width: "100%",
     height: "55px",
-    background: "#4d4d56",
-    border: "none",
+    background: "none",
+    border: "2px solid #050401",
     textDecoration: "none",
     outline: "0",
+    color: "#050401",
 
     "&:focus": {
       border: "2px solid #30BCED",
@@ -45,18 +46,19 @@ const useStyles = makeStyles({
 
   labelStyle: {
     display: "block",
-    color: "#FFFAFF",
+    color: "#050401",
     fontWeight: "600",
     textTransform: "uppercase",
     marginBottom: "20px",
   },
 
   textAreaStyle: {
-    background: "#3c3c44",
+    background: "#FFFAFF",
     width: "100%",
-    border: "none",
+    border: "2px solid #050401",
     textDecoration: "none",
     outline: "0",
+    color: "#050401",
 
     "&:focus": {
       border: "2px solid #30BCED",
@@ -64,6 +66,16 @@ const useStyles = makeStyles({
   },
   buttonStyle: {
     marginTop: "50px",
+    border: "none",
+    cursor: "pointer",
+    padding: "20px 40px",
+    backgroundColor: "#050401",
+    color: "#FFFAFF",
+    textTransform: "upperCase",
+
+    "&:hover": {
+      backgroundColor: "#30BCED",
+    },
   },
 });
 
@@ -77,7 +89,12 @@ const Contact = (Name) => {
           Would you like to connect?
         </Typography>
 
-        <form className={classes.formStyle}>
+        <form
+          className={classes.formStyle}
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
           {/*for attribute on the label and id attribute on input must be the same to bind them together
             name attribute on the input field is necessary for the information to be sent*/}
 
@@ -123,8 +140,13 @@ const Contact = (Name) => {
               rows="12"
             ></textarea>
           </div>
-          <div className={classes.buttonStyle}>
-            <button type="submit" form="form1" value="Submit">
+          <div className={classes.buttonContainer}>
+            <button
+              className={classes.buttonStyle}
+              type="submit"
+              form="form1"
+              value="Submit"
+            >
               Send message
             </button>
           </div>
