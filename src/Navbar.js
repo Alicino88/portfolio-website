@@ -18,6 +18,7 @@ const useStyles = makeStyles({
     margin: "25px",
     textDecoration: "None",
     color: "#FFFAFF",
+    fontFamily: "Montserrat",
     "&:hover": {
       borderBottom: "4px solid #30BCED",
       paddingBottom: "8px",
