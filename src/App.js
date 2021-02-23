@@ -3,6 +3,7 @@ import Home from "./Home.js";
 import About from "./About.js";
 import Work from "./Work.js";
 import Contact from "./Contact.js";
+import Footer from "./Footer.js";
 import { Route } from "react-router-dom";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Contact />
         </Route>
       </div>
+      <Footer />
     </div>
   );
 }

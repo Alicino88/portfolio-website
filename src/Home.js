@@ -6,7 +6,7 @@ const useStyles = makeStyles({
   homeContainer: {
     backgroundColor: "#050401",
     color: "#FFFAFF",
-    height: "100vh",
+    height: "600px",
   },
   textContainer: {
     width: "75vw",
