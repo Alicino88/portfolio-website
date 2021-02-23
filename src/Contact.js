@@ -142,7 +142,7 @@ const Contact = (Name) => {
           </div>
           <div className={classes.buttonContainer}>
             <button className={classes.buttonStyle} type="submit">
-              Send message
+              Test continuos deployment
             </button>
           </div>
         </form>
