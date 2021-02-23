@@ -95,6 +95,7 @@ const Contact = (Name) => {
           method="POST"
           data-netlify="true"
         >
+          <input type="hidden" name="form-name" value="contact" />
           {/*for attribute on the label and id attribute on input must be the same to bind them together
             name attribute on the input field is necessary for the information to be sent*/}
 
@@ -134,7 +135,6 @@ const Contact = (Name) => {
 
             <textarea
               className={classes.textAreaStyle}
-              type="text"
               id="message"
               name="message"
               rows="12"
