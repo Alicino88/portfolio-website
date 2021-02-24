@@ -23,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
     width: "65vw",
     padding: "10% 0 10% 90px",
     [theme.breakpoints.down("sm")]: {
+      padding: "25% 0 10% 60px",
+      width: "90vw",
+    },
+    [theme.breakpoints.down("xs")]: {
       padding: "25% 0 10% 30px",
       width: "90vw",
     },
@@ -44,9 +48,13 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "90px",
     marginTop: "80px",
     [theme.breakpoints.down("sm")]: {
+      marginLeft: "60px",
+      marginRight: "60px",
+      marginTop: "400px",
+    },
+    [theme.breakpoints.down("xs")]: {
       marginLeft: "30px",
       marginRight: "30px",
-      marginTop: "400px",
     },
   },
 }));

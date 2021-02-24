@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   headerContainer: {
     backgroundColor: "#050401",
     height: "300px",
@@ -12,15 +12,21 @@ const useStyles = makeStyles({
     width: "75vw",
     paddingLeft: "90px",
     color: "#FFFAFF",
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "60px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: "30px",
+    },
   },
-});
+}));
 
 const Header = (props) => {
   const classes = useStyles();
   return (
     <div className={classes.headerContainer}>
       <div className={classes.textContainer}>
-        <Typography variant="h4" component="h1">
+        <Typography variant="h3" component="h1">
           {props.title}
         </Typography>
       </div>
