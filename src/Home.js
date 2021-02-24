@@ -1,9 +1,8 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
-import Radium from "radium";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   homeContainer: {
     backgroundColor: "#050401",
     color: "#FFFAFF",
@@ -23,6 +22,10 @@ const useStyles = makeStyles({
   textContainer: {
     width: "65vw",
     padding: "10% 0 10% 90px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "25% 0 10% 30px",
+      width: "90vw",
+    },
   },
 
   titleStyle: {
@@ -40,27 +43,21 @@ const useStyles = makeStyles({
     marginLeft: "90px",
     marginRight: "90px",
     marginTop: "80px",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "30px",
+      marginRight: "30px",
+      marginTop: "400px",
+    },
   },
-});
+}));
 
 const Home = () => {
   const classes = useStyles();
 
-  const styles = {
-    textContainerStyle: {
-      "@media (max-width: 600px)": {
-        padding: "5% 0 5% 90px",
-      },
-    },
-  };
-
   return (
     <section style={{ backgroundColor: "#050401" }}>
       <div className={classes.homeContainer}>
-        <div
-          style={styles.textContainerStyle}
-          className={classes.textContainer}
-        >
+        <div className={classes.textContainer}>
           <Typography
             variant="h1"
             component="h1"
@@ -88,4 +85,4 @@ const Home = () => {
   );
 };
 
-export default Radium(Home);
+export default Home;
