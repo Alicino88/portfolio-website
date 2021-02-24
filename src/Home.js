@@ -1,6 +1,7 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
+import Radium from "radium";
 
 const useStyles = makeStyles({
   homeContainer: {
@@ -44,10 +45,22 @@ const useStyles = makeStyles({
 
 const Home = () => {
   const classes = useStyles();
+
+  const styles = {
+    textContainerStyle: {
+      "@media (max-width: 600px)": {
+        padding: "5% 0 5% 90px",
+      },
+    },
+  };
+
   return (
     <section style={{ backgroundColor: "#050401" }}>
       <div className={classes.homeContainer}>
-        <div className={classes.textContainer}>
+        <div
+          style={styles.textContainerStyle}
+          className={classes.textContainer}
+        >
           <Typography
             variant="h1"
             component="h1"
@@ -75,4 +88,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Radium(Home);
