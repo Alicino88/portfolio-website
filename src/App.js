@@ -25,7 +25,14 @@ theme = responsiveFontSizes(theme);
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
+      <div
+        className="App"
+        style={{
+          backgroundColor: "#050401",
+          height: "100vh",
+          position: "relative",
+        }}
+      >
         <Navbar />
         <div className="Content">
           <Route exact path="/">
@@ -41,7 +48,7 @@ function App() {
             <Contact />
           </Route>
         </div>
-        <Footer />
+        <Footer style={{ position: "absolute", bottom: "0" }} />
       </div>
     </ThemeProvider>
   );

@@ -1,48 +1,77 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles({
   homeContainer: {
     backgroundColor: "#050401",
     color: "#FFFAFF",
     height: "auto",
+    /*
+    "&::after": {
+      content: "''",
+      position: "absolute",
+      borderBottom: "4px solid #30BCED",
+      width: "80vw",
+      bottom: "0",
+      marginLeft: "90px",
+      marginRight: "90px",
+    },
+    */
   },
   textContainer: {
-    width: "75vw",
-    padding: "90px 0 0 90px",
+    width: "65vw",
+    padding: "10% 0 10% 90px",
   },
 
   titleStyle: {
-    fontWeight: "400",
+    fontWeight: "600",
   },
 
   textStyle: {
     marginTop: "30px",
-    fontWeight: "300",
+    fontWeight: "500",
+  },
+
+  dividerStyle: {
+    background: "#30BCED",
+    height: "3px",
+    marginLeft: "90px",
+    marginRight: "90px",
+    marginTop: "80px",
   },
 });
 
 const Home = () => {
   const classes = useStyles();
   return (
-    <div className={classes.homeContainer}>
-      <div className={classes.textContainer}>
-        <Typography variant="h1" component="h1" className={classes.titleStyle}>
-          Ciao!I am Alice,
-        </Typography>
+    <section style={{ backgroundColor: "#050401" }}>
+      <div className={classes.homeContainer}>
+        <div className={classes.textContainer}>
+          <Typography
+            variant="h1"
+            component="h1"
+            className={classes.titleStyle}
+          >
+            Ciao! I am Alice,
+          </Typography>
 
-        <Typography
-          variant="h3"
-          component="h1"
-          fontWeight="fontWeightLight"
-          className={classes.textStyle}
-        >
-          A front-end developer based in Helsinki experienced with Vue and
-          React. Currently I am studying to hone my Javascript skills. This
-          website is about my work and how I became a developer.
-        </Typography>
+          <Typography
+            variant="h3"
+            component="h1"
+            fontWeight="fontWeightLight"
+            className={classes.textStyle}
+          >
+            A front-end developer based in Helsinki experienced with{" "}
+            <span style={{ color: "#30BCED", fontWeight: "700" }}>React</span>{" "}
+            and <span style={{ color: "#30BCED", fontWeight: "700" }}>Vue</span>
+            . This website is about my work and the journey which led me to
+            become a developer.
+          </Typography>
+        </div>
       </div>
-    </div>
+      <Divider className={classes.dividerStyle} />
+    </section>
   );
 };
 
