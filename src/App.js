@@ -5,7 +5,6 @@ import Work from "./Work.js";
 import Contact from "./Contact.js";
 import Footer from "./Footer.js";
 import { Route } from "react-router-dom";
-import { StyleRoot } from "radium";
 
 //with the below we can create a theme to override the default one
 import {
@@ -25,35 +24,33 @@ theme = responsiveFontSizes(theme);
 
 function App() {
   return (
-    <StyleRoot>
-      <ThemeProvider theme={theme}>
-        <div
-          className="App"
-          style={{
-            backgroundColor: "#050401",
-            height: "100vh",
-            position: "relative",
-          }}
-        >
-          <Navbar />
-          <div className="Content">
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/About">
-              <About />
-            </Route>
-            <Route exact path="/Work">
-              <Work />
-            </Route>
-            <Route exact path="/Contact">
-              <Contact />
-            </Route>
-          </div>
-          <Footer style={{ position: "absolute", bottom: "0" }} />
+    <ThemeProvider theme={theme}>
+      <div
+        className="App"
+        style={{
+          backgroundColor: "#050401",
+          height: "100vh",
+          position: "relative",
+        }}
+      >
+        <Navbar />
+        <div className="Content">
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/About">
+            <About />
+          </Route>
+          <Route exact path="/Work">
+            <Work />
+          </Route>
+          <Route exact path="/Contact">
+            <Contact />
+          </Route>
         </div>
-      </ThemeProvider>
-    </StyleRoot>
+        <Footer style={{ position: "absolute", bottom: "0" }} />
+      </div>
+    </ThemeProvider>
   );
 }
 
