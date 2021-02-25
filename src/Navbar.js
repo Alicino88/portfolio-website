@@ -2,9 +2,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link, NavLink } from "react-router-dom";
-
-const useStyles = makeStyles({
+import { NavLink } from "react-router-dom";
+const useStyles = makeStyles((theme) => ({
   appBarStyle: {
     backgroundColor: "#050401",
     marginleft: "100px",
@@ -13,6 +12,9 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "start",
     marginLeft: "50px",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "10px",
+    },
   },
   links: {
     margin: "25px",
@@ -28,7 +30,7 @@ const useStyles = makeStyles({
     borderBottom: "4px solid #30BCED",
     paddingBottom: "8px",
   },
-});
+}));
 
 const Navbar = () => {
   const classes = useStyles();
