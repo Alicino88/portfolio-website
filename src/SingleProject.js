@@ -36,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       height: "100%",
       transition: "background 1s",
+      [theme.breakpoints.down("xs")]: {
+        background: "none",
+      },
     },
     "&:hover::before": {
       background: "none",
@@ -56,6 +59,9 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       height: "100%",
       transition: "background 1s",
+      [theme.breakpoints.down("xs")]: {
+        background: "none",
+      },
     },
     "&:hover::before": {
       background: "none",
