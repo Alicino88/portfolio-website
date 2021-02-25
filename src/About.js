@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Header from "./Header.js";
 import AboutText from "./AboutText.js";
 import Quote from "./Quote.js";
-import Skills from "./Skills.js";
 
 const useStyles = makeStyles({
   aboutContainer: {
@@ -25,7 +24,6 @@ const About = () => {
       <Header title={"About"} />
       <AboutText />
       <Quote />
-      <Skills />
     </div>
   );
 };
