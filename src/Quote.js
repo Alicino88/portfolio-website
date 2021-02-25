@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: "100vw",
       position: "relative",
+      height: "100%",
     },
   },
 
