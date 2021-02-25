@@ -1,14 +1,24 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import classNames from "classnames";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
+  projectContainer: {
+    display: "flex",
+    height: "auto",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
+  },
+
   pictureContainerBlue: {
     width: "40vw",
     height: "350px",
     position: "relative",
+
     "&::before": {
       content: "''",
-      background: "hsla(196, 31%, 14%, 1)",
+      background: "hsla(205, 64%, 17%, 1)",
       opacity: "0.7",
       position: "absolute",
       width: "100%",
@@ -23,6 +33,9 @@ const useStyles = makeStyles({
     width: "40vw",
     height: "350px",
     position: "relative",
+    [theme.breakpoints.down("xs")]: {
+      width: "100vw",
+    },
     "&::before": {
       content: "''",
       background: "hsla(196, 31%, 14%, 1)",
@@ -70,7 +83,7 @@ const useStyles = makeStyles({
   text: {
     marginTop: "20px",
   },
-});
+}));
 const Singleproject = ({
   title,
   picture,
@@ -84,24 +97,30 @@ const Singleproject = ({
   const classes = useStyles();
   return (
     <div
-      style={{ display: "flex", height: "auto" }}
-      className={picAlignRight ? classes.picAlignRight : classes.picAlignLeft}
+      className={classNames(
+        picAlignRight ? classes.picAlignRight : classes.picAlignLeft,
+        classes.projectContainer
+      )}
     >
-      <a href={pictureLink} rel="noopener noreferrer" target="_blank">
-        <div
-          className={
-            pictureBlue
-              ? classes.pictureContainerBlue
-              : classes.pictureContainerGrey
-          }
-        >
-          <img
-            src={picture}
-            alt="Truemed services page"
-            className={classes.pictureStyle}
-          />
-        </div>
-      </a>
+      <div className={classes.pictureContainer}>
+        <a href={pictureLink} rel="noopener noreferrer" target="_blank">
+          <div
+            className={
+              pictureBlue
+                ? classes.pictureContainerBlue
+                : classes.pictureContainerGrey
+            }
+          >
+            {" "}
+            <img
+              src={picture}
+              alt="Truemed services page"
+              className={classes.pictureStyle}
+            />
+          </div>
+        </a>
+      </div>
+
       <div
         style={{
           width: "60vw",
