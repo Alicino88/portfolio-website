@@ -16,36 +16,36 @@ const Work = () => {
         title={"React Users Page"}
         picture={Users}
         pictureLink={"https://react-users-page2.netlify.app/"}
-        text="I had fun creating a small React application. The app fetches some users data from an API via Axios and uses useState, useEffect, useParams hooks."
+        text="A small React application fetching users data from an external API via Axios and using useState, useEffect, useParams hooks."
       />
       <SingleProject
         title={"TrueMed Services Page"}
         picture={Truemed}
         whiteBackground
         greyText
-        pictureBlue
+        PictureLeftTop
         pictureLink={"https://truemedinc.com/services"}
-        text="This page was developed with Vue and Vuetify and it has been one of the several projects I carried out during my last traineeship as a frontend developer."
+        text="A page developed with Vue and Vuetify UI library. This progect is part of my traineedhip as a front-end developer with TrueMed."
       />
       <SingleProject
         title={"Crostata Cake Website"}
         Crostata
         Cake
+        PictureLeftTop
         Website
         picture={Crostata}
         picAlignRight
         pictureLink={"https://codepen.io/Alicinetto/full/mdJqdEq"}
-        text="I must admit, this website is nothing fancy as it doesn't use any Javascript framework. Nevertheless I wanted to include it in my portfolio as I really like the graphics"
+        text="One of my first websites developed with pure HTML and CSS. I wanted to include it in my portfolio as I really like the graphics."
       />
       <SingleProject
         title={"Product Landing Page"}
         picture={Lando}
         whiteBackground
+        PictureLeftTop
         greyText
         pictureLink={"https://codepen.io/Alicinetto/full/VweyBgv"}
-        text="I love coding landing pages, it's fun and allows you to think also
-      from a digital marketing perspective: how to grasp the attention of the reader? How to
-      drive conversions?"
+        text="I love coding landing pages, it's fun and allows you to think also from a digital marketing perspective."
       />
     </div>
   );

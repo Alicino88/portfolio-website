@@ -6,6 +6,15 @@ const useStyles = makeStyles((theme) => ({
   projectContainer: {
     display: "flex",
     height: "auto",
+  },
+  picAlignRight: {
+    flexDirection: "row-reverse",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
+  },
+  picAlignLeft: {
+    flexDirection: "row",
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column",
     },
@@ -15,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
     width: "40vw",
     height: "350px",
     position: "relative",
+    [theme.breakpoints.down("xs")]: {
+      width: "100vw",
+    },
 
     "&::before": {
       content: "''",
@@ -49,20 +61,50 @@ const useStyles = makeStyles((theme) => ({
       background: "none",
     },
   },
-  picAlignRight: {
-    flexDirection: "row-reverse",
-  },
-  picAlignLeft: {
-    flexDirection: "row",
-  },
+
   pictureStyle: {
     width: "100%",
     height: "100%",
     objectFit: "cover",
   },
 
+  pictureLeftTop: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    [theme.breakpoints.down("sm")]: {
+      objectPosition: "left top",
+    },
+  },
+
+  textSection: {
+    width: "60vw",
+    height: "350px",
+    padding: "90px 0 90px 90px",
+    display: "flex",
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      width: "100vw",
+      padding: "90px 0 90px 60px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "100vw",
+      padding: "30px 30px 30px 30px",
+    },
+  },
+
+  textContainer: {
+    width: "40vw",
+    [theme.breakpoints.down("xs")]: {
+      width: "100vw",
+    },
+  },
+
   textContainerWhite: {
     backgroundColor: "#FFFAFF",
+    [theme.breakpoints.down("xs")]: {
+      width: "100vw",
+    },
   },
 
   textContainerGrey: {
@@ -87,6 +129,8 @@ const useStyles = makeStyles((theme) => ({
 const Singleproject = ({
   title,
   picture,
+  //*the below prop is to reposition some of the pics for mobile screens
+  PictureLeftTop,
   picAlignRight,
   whiteBackground,
   greyText,
@@ -102,42 +146,39 @@ const Singleproject = ({
         classes.projectContainer
       )}
     >
-      <div className={classes.pictureContainer}>
-        <a href={pictureLink} rel="noopener noreferrer" target="_blank">
-          <div
+      <a href={pictureLink} rel="noopener noreferrer" target="_blank">
+        <div
+          className={
+            pictureBlue
+              ? classes.pictureContainerBlue
+              : classes.pictureContainerGrey
+          }
+        >
+          {" "}
+          <img
+            src={picture}
+            alt="Truemed services page"
             className={
-              pictureBlue
-                ? classes.pictureContainerBlue
-                : classes.pictureContainerGrey
+              PictureLeftTop ? classes.pictureLeftTop : classes.pictureStyle
             }
-          >
-            {" "}
-            <img
-              src={picture}
-              alt="Truemed services page"
-              className={classes.pictureStyle}
-            />
-          </div>
-        </a>
-      </div>
+          />
+        </div>
+      </a>
 
       <div
-        style={{
-          width: "60vw",
-          height: "350px",
-          padding: "90px 0 90px 90px",
-          display: "flex",
-          alignItems: "center",
-        }}
-        className={
+        className={classNames(
           whiteBackground
             ? classes.textContainerWhite
-            : classes.textContainerGrey
-        }
+            : classes.textContainerGrey,
+          classes.textSection
+        )}
       >
         <div
-          style={{ width: "40vw" }}
-          className={greyText ? classes.greyText : classes.whiteText}
+          style={{}}
+          className={classNames(
+            greyText ? classes.greyText : classes.whiteText,
+            classes.textContainer
+          )}
         >
           <div className={classes.title}>
             <Typography variant="h5" component="h2">
