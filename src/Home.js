@@ -47,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "90px",
     marginRight: "90px",
     marginTop: "80px",
+    position: "absolute",
+    bottom: "0",
+    width: "80vw",
     [theme.breakpoints.down("sm")]: {
       marginLeft: "60px",
       marginRight: "60px",
@@ -63,7 +66,13 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <section style={{ backgroundColor: "#050401", heigth: "100vh" }}>
+    <section
+      style={{
+        backgroundColor: "#050401",
+        heigth: "100vh",
+        position: "relative",
+      }}
+    >
       <div className={classes.homeContainer}>
         <div className={classes.textContainer}>
           <Typography
