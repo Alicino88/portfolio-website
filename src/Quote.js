@@ -115,7 +115,12 @@ const Quote = () => {
             creative skills.
           </Typography>
           <div className={classes.buttonContainer}>
-            <a href={Curriculum} rel="noopener noreferrer" target="_blank">
+            <a
+              href={Curriculum}
+              style={{ textDecoration: "none" }}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <Button
                 variant="outlined"
                 className={classes.buttonStyle}
