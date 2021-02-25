@@ -21,13 +21,13 @@ const useStyles = makeStyles((theme) => ({
   },
   textContainer: {
     width: "65vw",
-    padding: "10% 0 10% 90px",
+    padding: "10% 0 20% 90px",
     [theme.breakpoints.down("sm")]: {
-      padding: "25% 0 10% 60px",
+      padding: "25% 0 40% 60px",
       width: "90vw",
     },
     [theme.breakpoints.down("xs")]: {
-      padding: "25% 0 10% 30px",
+      padding: "20% 0 30% 30px",
       width: "90vw",
     },
   },
@@ -46,7 +46,6 @@ const useStyles = makeStyles((theme) => ({
     height: "3px",
     marginLeft: "90px",
     marginRight: "90px",
-    marginTop: "80px",
     position: "absolute",
     bottom: "0",
     width: "80vw",
