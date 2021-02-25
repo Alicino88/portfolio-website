@@ -79,7 +79,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   imageStyle: {
-    backgroundPosition: "center",
     width: "100%",
     height: "100%",
     objectFit: "cover",
