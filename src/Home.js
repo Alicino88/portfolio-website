@@ -63,7 +63,7 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <section style={{ backgroundColor: "#050401" }}>
+    <section style={{ backgroundColor: "#050401", heigth: "100vh" }}>
       <div className={classes.homeContainer}>
         <div className={classes.textContainer}>
           <Typography
