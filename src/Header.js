@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     height: "300px",
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      height: "200px",
+    },
   },
   textContainer: {
     width: "75vw",
