@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "1",
     width: "60vw",
     [theme.breakpoints.down("sm")]: {
-      width: "80vw",
+      width: "85vw",
       paddingLeft: "60px",
     },
     [theme.breakpoints.down("xs")]: {
@@ -54,24 +54,16 @@ const AboutText = () => {
           component="h2"
           style={{ letterSpacing: "1px", lineHeight: "1.5" }}
         >
-          For several years, I have been working as a digital marketer and
-          copywriter, first in Italy (where I am originally from) and then in
-          Finland, where now I have been living for five years. For some reason,
-          I always felt that my career was missing something and that I wanted
-          to have a job I would really feel accomplished and happy about. I had
-          previously been working for a web development company as a project
-          manager where my role was mostly to coordinate the designers and
-          developers to make sure the client would be happy with the final
-          result. I had never coded before. Then, one day while working as a
-          digital marketing specialist in Finland, I saw a frontend developer
-          coding while showing beautiful UIs on his computer screen. That was
-          it, from that moment I knew what I wanted to do. At that time I was
-          about to go on maternity leave and it sounded a bit crazy to start
-          studying with a newborn with no relatives to help. Throughout my time
-          at home with my son Tomas I found balance between changing diapers,
-          surviving the Finnish winter, and keep my mental health. I completed
-          two online certifications and the more I was coding the more I knew
-          that that was going to be my future working life.
+          Two years ago, in the darkness of the Finnish winter, I found my
+          light. My son was born on February 27th. As crazy as it sounds, it was
+          during my maternity leave that I decided to give a try to coding and,
+          eventually I fell in love with it. In a fex months I completed two
+          online certifications in web development and programming and, after my
+          time at home with my little bundle of joy, I landed a 5-month
+          traineeship as a front-end developer. In the past couple of years, I
+          gained hands-on experience with the following technologies:
+          Javascript, Html, Css, React, and Vue. The website you are looking at
+          is my latest project.
         </Typography>
       </div>
     </div>

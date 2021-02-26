@@ -111,8 +111,8 @@ const Quote = () => {
       <div className={classes.quoteContainer}>
         <div className={classes.textContainer}>
           <Typography className={classes.textStyle} variant="h5" component="h3">
-            I love frontend development as it allows to use both analytical and
-            creative skills.
+            I love frontend development as it allows to use both creative and
+            analytical skills.
           </Typography>
           <div className={classes.buttonContainer}>
             <a

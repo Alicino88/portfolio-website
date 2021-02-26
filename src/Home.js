@@ -79,7 +79,7 @@ const Home = () => {
             component="h1"
             className={classes.titleStyle}
           >
-            Ciao! I am Alice,
+            Hi! I am Alice,
           </Typography>
 
           <Typography
@@ -88,11 +88,14 @@ const Home = () => {
             fontWeight="fontWeightLight"
             className={classes.textStyle}
           >
-            A front-end developer based in Helsinki experienced with{" "}
-            <span style={{ color: "#30BCED", fontWeight: "700" }}>React</span>{" "}
-            and <span style={{ color: "#30BCED", fontWeight: "700" }}>Vue</span>
-            . This website is about my work and the journey which led me to
-            become a developer.
+            A junior front-end developer based in Helsinki. I made this website
+            to share my{" "}
+            <span style={{ color: "#30BCED", fontWeight: "700" }}>work</span>{" "}
+            and{" "}
+            <span style={{ color: "#30BCED", fontWeight: "700" }}>
+              coding journey{" "}
+            </span>
+            with you.
           </Typography>
         </div>
       </div>
