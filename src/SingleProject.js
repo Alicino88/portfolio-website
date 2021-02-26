@@ -10,13 +10,13 @@ const useStyles = makeStyles((theme) => ({
   picAlignRight: {
     flexDirection: "row-reverse",
     [theme.breakpoints.down("xs")]: {
-      flexDirection: "column",
+      flexDirection: "column-reverse",
     },
   },
   picAlignLeft: {
     flexDirection: "row",
     [theme.breakpoints.down("xs")]: {
-      flexDirection: "column",
+      flexDirection: "column-reverse",
     },
   },
 
