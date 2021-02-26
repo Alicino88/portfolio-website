@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import NavBarContainer from "./NavBarContainer";
 import Home from "./Home.js";
 import About from "./About.js";
 import Work from "./Work.js";
@@ -25,7 +25,7 @@ theme = responsiveFontSizes(theme);
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Navbar />
+      <NavBarContainer />
       <div className="Content">
         <Route exact path="/">
           <Home />

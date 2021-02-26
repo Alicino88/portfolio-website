@@ -1,45 +1,42 @@
-import AppBar from "@material-ui/core/AppBar";
-import Typography from "@material-ui/core/Typography";
-import Toolbar from "@material-ui/core/Toolbar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
+import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { NavLink } from "react-router-dom";
-
-const useStyles = makeStyles((theme) => ({
-  appBarStyle: {
+import AppBar from "@material-ui/core/AppBar";
+const useStyles = makeStyles({
+  backgroundStyle: {
     backgroundColor: "#050401",
-    marginleft: "100px",
+    display: "flex",
+    justifyContent: "end",
   },
-  toolbarStyle: {
-    justifyContent: "start",
-    marginLeft: "50px",
-    marginTop: "30px",
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: "10px",
-    },
-  },
-  links: {
-    margin: "25px",
-    textDecoration: "None",
+  hamburgerStyle: {
     color: "#FFFAFF",
-    fontFamily: "Montserrat",
-    "&:hover": {
-      borderBottom: "4px solid #30BCED",
-      paddingBottom: "8px",
-    },
+    margin: "20px",
   },
-  linkActive: {
-    borderBottom: "4px solid #30BCED",
-    paddingBottom: "8px",
+  mobileMenuStyle: {
+    backgroundColor: "#050401",
+    color: "#FFFAFF",
+    position: "abslute",
+    height: "100vh",
+    width: "100vw",
   },
-}));
+});
 
-const Navbar = () => {
+const MobileMenu = () => {
   const classes = useStyles();
+  const [showmenu, setShowMewnu] = useState(false);
 
-  return (
-    //added position static as by default React puts fixed position which takes the menu out from the normal page flow
-    <AppBar className={classes.appBarStyle} position="static" elevation="0">
-      <Toolbar className={classes.toolbarStyle}>
+  let menu;
+
+  if (showmenu) {
+    menu = (
+      <AppBar
+        className={classes.mobileMenuStyle}
+        position="static"
+        elevation="0"
+      >
         <Typography>
           <NavLink
             exact
@@ -81,9 +78,20 @@ const Navbar = () => {
             Contact
           </NavLink>
         </Typography>
-      </Toolbar>
-    </AppBar>
+      </AppBar>
+    );
+  }
+  return (
+    <div className={classes.backgroundStyle}>
+      <FontAwesomeIcon
+        style={{ width: "30px", height: "30px" }}
+        icon={faBars}
+        onClick={() => setShowMewnu(!showmenu)}
+        className={classes.hamburgerStyle}
+      />
+      {menu}
+    </div>
   );
 };
 
-export default Navbar;
+export default MobileMenu;
