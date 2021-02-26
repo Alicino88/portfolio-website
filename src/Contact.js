@@ -124,9 +124,15 @@ const useStyles = makeStyles((theme) => ({
   buttonStyle: {
     padding: "10px 30px",
     fontWeight: "600",
+    fontSize: "15px",
+    fontFamily: "Montserrat",
     marginTop: "40px",
     color: "#30BCED",
     border: "2px solid #30BCED",
+    [theme.breakpoints.down("sm")]: {
+      backgroundColor: "#30BCED",
+      color: "#FFFAFF",
+    },
     "&:hover": {
       backgroundColor: "#30BCED",
       color: "#FFFAFF",
