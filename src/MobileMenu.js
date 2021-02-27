@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   backgroundStyle: {
     backgroundColor: "#050401",
     display: "flex",
-    justifyContent: "end",
+    justifyContent: "start",
   },
   hamburgerStyle: {
     color: "#FFFAFF",
@@ -32,6 +32,7 @@ const useStyles = makeStyles({
     lineHeight: "5.5",
     textTransform: "uppercase",
     fontFamily: "montserrat",
+    fontSize: "20px",
     borderBottom: "2px solid #30BCED",
     paddingBottom: "8px",
   },
@@ -50,7 +51,7 @@ const MobileMenu = () => {
   if (showmenu) {
     menu = (
       <AppBar className={classes.mobileMenuStyle}>
-        <div style={{ display: "flex", justifyContent: "end" }}>
+        <div style={{ display: "flex", justifyContent: "start" }}>
           <FontAwesomeIcon
             style={{ width: "40px", height: "40px" }}
             icon={faTimes}

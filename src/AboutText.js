@@ -46,7 +46,11 @@ const AboutText = () => {
   return (
     <div className={classes.backgroundPicture}>
       <div className={classes.textContainer}>
-        <Typography variant="h4" color="h2" style={{ marginBottom: "30px" }}>
+        <Typography
+          variant="h4"
+          color="h2"
+          style={{ marginBottom: "30px", fontWeight: "600" }}
+        >
           How I become a frontend developer
         </Typography>
         <Typography
@@ -57,13 +61,19 @@ const AboutText = () => {
           Two years ago, in the darkness of the Finnish winter, I found my
           light. My son was born on February 27th. As crazy as it sounds, it was
           during my maternity leave that I decided to give a try to coding and,
-          eventually I fell in love with it. In a fex months I completed two
-          online certifications in web development and programming and, after my
-          time at home with my little bundle of joy, I landed a 5-month
-          traineeship as a front-end developer. In the past couple of years, I
-          gained hands-on experience with the following technologies:
-          Javascript, Html, Css, React, and Vue. The website you are looking at
-          is my latest project.
+          eventually, I fell in love with it. <br />
+          In a few months I completed two online certifications in web
+          development and programming and, after my time at home with my little
+          bundle of joy, I landed a 5-month traineeship as a front-end
+          developer. <br />
+          In the past couple of years, I gained hands-on experience with the
+          following technologies:{" "}
+          <span
+            style={{ borderBottom: "2px solid #30BCED", fontWeight: "600" }}
+          >
+            Javascript, Html, Css, React, and Vue
+          </span>
+          . The website you are looking at is my latest project.
         </Typography>
       </div>
     </div>

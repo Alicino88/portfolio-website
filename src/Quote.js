@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#30BCED",
     border: "2px solid #30BCED",
 
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       backgroundColor: "#30BCED",
       color: "#FFFAFF",
     },
