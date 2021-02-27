@@ -1,10 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { NavLink } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
+import Divider from "@material-ui/core/Divider";
 const useStyles = makeStyles({
   backgroundStyle: {
     backgroundColor: "#050401",
@@ -18,9 +20,20 @@ const useStyles = makeStyles({
   mobileMenuStyle: {
     backgroundColor: "#050401",
     color: "#FFFAFF",
-    position: "abslute",
-    height: "100vh",
-    width: "100vw",
+    position: "fixed",
+    top: "0px",
+    bottom: "0",
+    left: "0",
+    rigth: "0",
+  },
+  links: {
+    textDecoration: "none",
+    color: "#FFFAFF",
+    lineHeight: "5.5",
+    textTransform: "uppercase",
+    fontFamily: "montserrat",
+    borderBottom: "2px solid #30BCED",
+    paddingBottom: "8px",
   },
 });
 
@@ -28,67 +41,89 @@ const MobileMenu = () => {
   const classes = useStyles();
   const [showmenu, setShowMewnu] = useState(false);
 
+  const closeMenu = () => {
+    setShowMewnu(false);
+  };
+
   let menu;
 
   if (showmenu) {
     menu = (
-      <AppBar
-        className={classes.mobileMenuStyle}
-        position="static"
-        elevation="0"
-      >
-        <Typography>
-          <NavLink
-            exact
-            className={classes.links}
-            activeClassName={classes.linkActive}
-            to="/"
-          >
-            Home
-          </NavLink>
-        </Typography>
-        <Typography>
-          <NavLink
-            exact
-            className={classes.links}
-            activeClassName={classes.linkActive}
-            /*when the link is equal to the path in the app component then the component is rendered*/
-            to="/About"
-          >
-            About
-          </NavLink>
-        </Typography>
-        <Typography>
-          <NavLink
-            exact
-            className={classes.links}
-            activeClassName={classes.linkActive}
-            to="/Work"
-          >
-            Work
-          </NavLink>
-        </Typography>
-        <Typography>
-          <NavLink
-            exact
-            className={classes.links}
-            activeClassName={classes.linkActive}
-            to="/Contact"
-          >
-            Contact
-          </NavLink>
-        </Typography>
+      <AppBar className={classes.mobileMenuStyle}>
+        <div style={{ display: "flex", justifyContent: "end" }}>
+          <FontAwesomeIcon
+            style={{ width: "40px", height: "40px" }}
+            icon={faTimes}
+            onClick={() => setShowMewnu(!showmenu)}
+            className={classes.hamburgerStyle}
+          />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            marginTop: "30px",
+          }}
+        >
+          <Typography>
+            <NavLink
+              exact
+              className={classes.links}
+              to="/"
+              onClick={() => closeMenu()}
+            >
+              Home
+            </NavLink>
+          </Typography>
+
+          <Typography>
+            <NavLink
+              exact
+              className={classes.links}
+              /*when the link is equal to the path in the app component then the component is rendered*/
+              to="/About"
+              onClick={() => closeMenu()}
+            >
+              About
+            </NavLink>
+          </Typography>
+
+          <Typography>
+            <NavLink
+              exact
+              className={classes.links}
+              to="/Work"
+              onClick={() => closeMenu()}
+            >
+              Work
+            </NavLink>
+          </Typography>
+
+          <Typography>
+            <NavLink
+              exact
+              className={classes.links}
+              to="/Contact"
+              onClick={() => closeMenu()}
+            >
+              Contact
+            </NavLink>
+          </Typography>
+        </div>
       </AppBar>
     );
   }
   return (
-    <div className={classes.backgroundStyle}>
-      <FontAwesomeIcon
-        style={{ width: "30px", height: "30px" }}
-        icon={faBars}
-        onClick={() => setShowMewnu(!showmenu)}
-        className={classes.hamburgerStyle}
-      />
+    <div>
+      <div className={classes.backgroundStyle}>
+        <FontAwesomeIcon
+          style={{ width: "30px", height: "30px" }}
+          icon={faBars}
+          onClick={() => setShowMewnu(!showmenu)}
+          className={classes.hamburgerStyle}
+        />
+      </div>
       {menu}
     </div>
   );
