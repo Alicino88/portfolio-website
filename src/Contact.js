@@ -150,8 +150,12 @@ const Contact = (Name) => {
     <div>
       <Header title={"Contact"} />
       <div className={classes.background}>
-        <Typography variant="h5" component="h2">
-          Would you like to discuss a possible cooperation?
+        <Typography
+          variant="h5"
+          component="h2"
+          style={{ fontFamily: "montserrat", fontWeight: "600" }}
+        >
+          Drop me a line, I'd like to hear from you!
         </Typography>
 
         <form

@@ -1,7 +1,7 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import Picture from "./images/Alice.jpg";
+import Picture from "./images/Alice2.jpg";
 import Curriculum from "./images/CV_Alice_Moretti.pdf";
 
 const useStyles = makeStyles((theme) => ({
@@ -92,6 +92,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     color: "#30BCED",
     border: "2px solid #30BCED",
+    fontFamily: "montserrat",
 
     [theme.breakpoints.down("sm")]: {
       backgroundColor: "#30BCED",

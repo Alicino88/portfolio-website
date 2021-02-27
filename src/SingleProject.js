@@ -187,7 +187,11 @@ const Singleproject = ({
           )}
         >
           <div className={classes.title}>
-            <Typography variant="h5" component="h2">
+            <Typography
+              variant="h5"
+              component="h2"
+              style={{ fontFamily: "montserrat", fontWeight: "600" }}
+            >
               {title}
             </Typography>
           </div>

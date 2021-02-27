@@ -49,7 +49,11 @@ const AboutText = () => {
         <Typography
           variant="h4"
           color="h2"
-          style={{ marginBottom: "30px", fontWeight: "600" }}
+          style={{
+            marginBottom: "30px",
+            fontWeight: "600",
+            fontFamily: "montserrat",
+          }}
         >
           How I become a frontend developer
         </Typography>
@@ -61,11 +65,12 @@ const AboutText = () => {
           Two years ago, in the darkness of the Finnish winter, I found my
           light. My son was born on February 27th. As crazy as it sounds, it was
           during my maternity leave that I decided to give a try to coding and,
-          eventually, I fell in love with it. <br />
+          eventually, I fell in love with it.{" "}
+          <br style={{ marginBottom: "20px" }} />
           In a few months I completed two online certifications in web
           development and programming and, after my time at home with my little
           bundle of joy, I landed a 5-month traineeship as a front-end
-          developer. <br />
+          developer. <br style={{ marginBottom: "20px" }} />
           In the past couple of years, I gained hands-on experience with the
           following technologies:{" "}
           <span

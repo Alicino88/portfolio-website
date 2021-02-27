@@ -25,7 +25,7 @@ const Work = () => {
         greyText
         PictureLeftTop
         pictureLink={"https://truemedinc.com/services"}
-        text="A page developed with Vue and Vuetify UI library. This progect is part of my traineedhip as a front-end developer with TrueMed."
+        text="A page developed with Vue and Vuetify UI library. This project was part of my last traineeship as a front-end developer."
       />
       <SingleProject
         title={"Crostata Cake Website"}
@@ -45,7 +45,7 @@ const Work = () => {
         PictureLeftTop
         greyText
         pictureLink={"https://codepen.io/Alicinetto/full/VweyBgv"}
-        text="I love coding landing pages, it's fun and allows you to think also from a digital marketing perspective."
+        text="I love coding landing pages, it's fun and allows you to think also from a marketing perspective: how to convert more leads?"
       />
     </div>
   );
