@@ -29,7 +29,7 @@ const useStyles = makeStyles({
   links: {
     textDecoration: "none",
     color: "#FFFAFF",
-    lineHeight: "5.5",
+    lineHeight: "4",
     textTransform: "uppercase",
     fontFamily: "montserrat",
     fontSize: "20px",
