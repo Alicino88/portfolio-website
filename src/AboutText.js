@@ -66,11 +66,22 @@ const AboutText = () => {
           light. My son was born on February 27th. As crazy as it sounds, it was
           during my maternity leave that I decided to give a try to coding and,
           eventually, I fell in love with it.{" "}
-          <br style={{ marginBottom: "20px" }} />
+        </Typography>
+        <Typography
+          variant="h5"
+          component="h2"
+          style={{ letterSpacing: "1px", lineHeight: "1.5", marginTop: "20px" }}
+        >
           In a few months I completed two online certifications in web
           development and programming and, after my time at home with my little
           bundle of joy, I landed a 5-month traineeship as a front-end
-          developer. <br style={{ marginBottom: "20px" }} />
+          developer.
+        </Typography>
+        <Typography
+          variant="h5"
+          component="h2"
+          style={{ letterSpacing: "1px", lineHeight: "1.5", marginTop: "20px" }}
+        >
           In the past couple of years, I gained hands-on experience with the
           following technologies:{" "}
           <span
