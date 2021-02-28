@@ -100,8 +100,8 @@ const Home = () => {
               rel="noopener noreferrer"
               style={{ color: "#30BCED", fontWeight: "700" }}
             >
-              coding journey{" "}
-            </a>
+              coding journey
+            </a>{" "}
             with you.
           </Typography>
         </div>
