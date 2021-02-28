@@ -221,6 +221,7 @@ const Contact = (Name) => {
               disableElevation
               disableRipple
               variant="outlined"
+              type="submit"
             >
               Send message
             </Button>
