@@ -79,7 +79,7 @@ const Home = () => {
             component="h1"
             className={classes.titleStyle}
           >
-            Hi! I am Alice,
+            Hi, my name is Alice.
           </Typography>
 
           <Typography
@@ -88,13 +88,20 @@ const Home = () => {
             fontWeight="fontWeightLight"
             className={classes.textStyle}
           >
-            A junior front-end developer based in Helsinki. I made this website
-            to share my{" "}
-            <span style={{ color: "#30BCED", fontWeight: "700" }}>work</span>{" "}
+            I am a junior front-end developer based in Helsinki. I've made this
+            website to share my{" "}
+            <a href="/Work" style={{ color: "#30BCED", fontWeight: "700" }}>
+              work
+            </a>{" "}
             and{" "}
-            <span style={{ color: "#30BCED", fontWeight: "700" }}>
+            <a
+              href="https://github.com/Alicino88?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#30BCED", fontWeight: "700" }}
+            >
               coding journey{" "}
-            </span>
+            </a>
             with you.
           </Typography>
         </div>
