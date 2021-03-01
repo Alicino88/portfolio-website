@@ -26,20 +26,20 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavBarContainer />
-      <div className="Content">
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/About">
-          <About />
-        </Route>
-        <Route exact path="/Work">
-          <Work />
-        </Route>
-        <Route exact path="/Contact">
-          <Contact />
-        </Route>
-      </div>
+
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/About">
+        <About />
+      </Route>
+      <Route exact path="/Work">
+        <Work />
+      </Route>
+      <Route exact path="/Contact">
+        <Contact />
+      </Route>
+
       <Footer />
     </ThemeProvider>
   );
