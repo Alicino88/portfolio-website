@@ -68,7 +68,7 @@ const Home = () => {
     <section
       style={{
         backgroundColor: "#050401",
-        height: "auto",
+        height: "90vh",
         position: "relative",
       }}
     >
