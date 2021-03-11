@@ -7,6 +7,7 @@ import Users from "./images/react_users1.png";
 import Lando from "./images/lando.png";
 import Crostata from "./images/crostata.png";
 
+//same here DRY. Use list variable and render similar JSX items by map
 const Work = () => {
   return (
     <div>

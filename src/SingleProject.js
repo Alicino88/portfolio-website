@@ -19,6 +19,17 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column-reverse",
     },
   },
+  /*
+  you can replace picAlignRight and picAlignLeft by this class and then picAlignRight is not needed
+  picAlign: {
+    flexDirection: "row",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column-reverse",
+    },
+    "&:nth-child": {
+      flexDirection: "row-reverse",
+    }
+  },*/
 
   pictureContainerBlue: {
     width: "40vw",
@@ -137,7 +148,7 @@ const Singleproject = ({
   picture,
   //*the below prop is to reposition some of the pics for mobile screens
   PictureLeftTop,
-  picAlignRight,
+  picAlignRight, //instead of defining this property you can use css :nth-child
   whiteBackground,
   greyText,
   pictureBlue,

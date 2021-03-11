@@ -21,6 +21,8 @@ const NavBarContainer = () => {
   }, []);
   /* If the viewport is narrower than the breakpoint render the
      mobile component, else render the desktop component */
+
+  /* you can use package like react-device-detect to detect if it's mobile or desktop */
   return width < breakpoint ? <MobileMenu /> : <NavBar />;
 };
 

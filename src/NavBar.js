@@ -1,7 +1,7 @@
 import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles"; //try to use styled-components for css
 import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -36,10 +36,52 @@ const useStyles = makeStyles((theme) => ({
 const NavBar = () => {
   const classes = useStyles();
 
+  /* very minor thing
+      
+          <NavLink
+            exact
+            className={classes.links}
+            activeClassName={classes.linkActive}
+            to="/"
+          >
+            <Typography>Home</Typography>
+          </NavLink>
+      using <Typography> inside of NavLink will be more logical becuase Typography styles text itself
+      but NavLink can have own style which can be needed to apply over Typography and redefine something
+  */
+
+  /*
+    DRY principle "Do not repeat yourself"
+    you're repeating in link markup block 4 times.
+    It would be better to define 
+    const linkList = [
+      {
+        title: 'Home',
+        to: "/"
+      },
+      {...},
+      {...},
+      {...},
+    ];
+    and render them with linkList.map in JSX (see below)
+  */
+
   return (
     //added position static as by default React puts fixed position which takes the menu out from the normal page flow
     <AppBar className={classes.appBarStyle} position="static" elevation="0">
       <Toolbar className={classes.toolbarStyle}>
+        {/*linkList.map(link => (
+          <Typography>
+            <NavLink
+              exact
+              className={classes.links}
+              activeClassName={classes.linkActive}
+              to={link.to}
+            >
+              {link.title}
+            </NavLink>
+          </Typography>
+        ))*/}
         <Typography>
           <NavLink
             exact

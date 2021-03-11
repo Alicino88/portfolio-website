@@ -6,7 +6,8 @@ import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { NavLink } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
-import Divider from "@material-ui/core/Divider";
+import Divider from "@material-ui/core/Divider"; //not used import. try to set up eslint for your project to detect style problems like this
+
 const useStyles = makeStyles({
   backgroundStyle: {
     backgroundColor: "#050401",
@@ -67,6 +68,9 @@ const MobileMenu = () => {
             marginTop: "30px",
           }}
         >
+          {/*  DRY same here like in NavBar.js.
+            You have item list for links in separate file and use this list here and in NavBar
+            and render it by linkList.map */}
           <Typography>
             <NavLink
               exact

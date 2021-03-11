@@ -1,4 +1,4 @@
-import { TextareaAutosize, Typography } from "@material-ui/core";
+import { TextareaAutosize /* not used import */, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import classNames from "classnames";
@@ -144,7 +144,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Contact = (Name) => {
+const Contact = (Name /* not used parameter */) => {
   const classes = useStyles();
   return (
     <div>
