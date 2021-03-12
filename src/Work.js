@@ -1,5 +1,3 @@
-import { Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import Header from "./Header.js";
 import SingleProject from "./SingleProject.js";
 import Truemed from "./images/truemed3.png";
@@ -12,7 +10,6 @@ const Work = () => {
     <div>
       <Header title={"Work"} />
       <SingleProject
-        picAlignRight
         title={"React Users Page"}
         picture={Users}
         pictureLink={"https://react-users-page2.netlify.app/"}
@@ -34,7 +31,6 @@ const Work = () => {
         PictureLeftTop
         Website
         picture={Crostata}
-        picAlignRight
         pictureLink={"https://codepen.io/Alicinetto/full/mdJqdEq"}
         text="One of my first websites developed with pure HTML and CSS. I wanted to include it in my portfolio as I really like the graphics."
       />

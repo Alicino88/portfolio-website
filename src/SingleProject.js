@@ -7,16 +7,15 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     height: "auto",
   },
-  picAlignRight: {
-    flexDirection: "row-reverse",
-    [theme.breakpoints.down("xs")]: {
-      flexDirection: "column-reverse",
-    },
-  },
-  picAlignLeft: {
+
+  picAlign: {
     flexDirection: "row",
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column-reverse",
+    },
+    //with the rule below the picture and the text alternate on each line
+    "&:nth-child(even)": {
+      flexDirection: "row-reverse",
     },
   },
 
@@ -137,7 +136,6 @@ const Singleproject = ({
   picture,
   //*the below prop is to reposition some of the pics for mobile screens
   PictureLeftTop,
-  picAlignRight,
   whiteBackground,
   greyText,
   pictureBlue,
@@ -146,12 +144,7 @@ const Singleproject = ({
 }) => {
   const classes = useStyles();
   return (
-    <div
-      className={classNames(
-        picAlignRight ? classes.picAlignRight : classes.picAlignLeft,
-        classes.projectContainer
-      )}
-    >
+    <div className={classNames(classes.picAlign, classes.projectContainer)}>
       <a href={pictureLink} rel="noopener noreferrer" target="_blank">
         <div
           className={
