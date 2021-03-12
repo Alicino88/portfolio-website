@@ -144,7 +144,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Contact = (Name) => {
+const Contact = () => {
   const classes = useStyles();
   return (
     <div>
