@@ -10,39 +10,15 @@ const useStyles = makeStyles((theme) => ({
 
   picAlign: {
     flexDirection: "row",
-    [theme.breakpoints.down("xs")]: {
-      flexDirection: "column-reverse",
-    },
     //with the rule below the picture and the text alternate on each line
     "&:nth-child(even)": {
       flexDirection: "row-reverse",
     },
-  },
-
-  pictureContainerBlue: {
-    width: "40vw",
-    height: "350px",
-    position: "relative",
     [theme.breakpoints.down("xs")]: {
-      width: "100vw",
-    },
-
-    "&::before": {
-      content: "''",
-      background: "hsla(205, 64%, 17%, 1)",
-      opacity: "0.7",
-      position: "absolute",
-      width: "100%",
-      height: "100%",
-      transition: "background 1s",
-      [theme.breakpoints.down("xs")]: {
-        background: "none",
-      },
-    },
-    "&:hover::before": {
-      background: "none",
+      flexDirection: "column-reverse!important",
     },
   },
+
   pictureContainerGrey: {
     width: "40vw",
     height: "350px",
@@ -68,12 +44,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   pictureStyle: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-  },
-
-  pictureLeftTop: {
     width: "100%",
     height: "100%",
     objectFit: "cover",
@@ -105,21 +75,21 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  textContainerWhite: {
-    backgroundColor: "#FFFAFF",
+  textContainerGrey: {
+    backgroundColor: "#303036",
     [theme.breakpoints.down("xs")]: {
       width: "100vw",
     },
+    "&:nth-child(odd)": {
+      backgroundColor: "#FFFAFF",
+    },
   },
 
-  textContainerGrey: {
-    backgroundColor: "#303036",
-  },
   whiteText: {
     color: "#FFFAFF",
-  },
-  greyText: {
-    color: "#303036",
+    "&:nth-child(odd)": {
+      color: "#303036",
+    },
   },
 
   title: {
@@ -134,51 +104,30 @@ const useStyles = makeStyles((theme) => ({
 const Singleproject = ({
   title,
   picture,
+  alt,
   //*the below prop is to reposition some of the pics for mobile screens
-  PictureLeftTop,
-  whiteBackground,
-  greyText,
-  pictureBlue,
   pictureLink,
   text,
 }) => {
   const classes = useStyles();
   return (
-    <div className={classNames(classes.picAlign, classes.projectContainer)}>
+    <div
+      className={classNames(
+        classes.textContainerGrey,
+        classes.picAlign,
+        classes.projectContainer,
+        classes.whiteText
+      )}
+    >
       <a href={pictureLink} rel="noopener noreferrer" target="_blank">
-        <div
-          className={
-            pictureBlue
-              ? classes.pictureContainerBlue
-              : classes.pictureContainerGrey
-          }
-        >
+        <div className={classes.pictureContainerGrey}>
           {" "}
-          <img
-            src={picture}
-            alt="Truemed services page"
-            className={
-              PictureLeftTop ? classes.pictureLeftTop : classes.pictureStyle
-            }
-          />
+          <img src={picture} alt={alt} className={classes.pictureStyle} />
         </div>
       </a>
 
-      <div
-        className={classNames(
-          whiteBackground
-            ? classes.textContainerWhite
-            : classes.textContainerGrey,
-          classes.textSection
-        )}
-      >
-        <div
-          style={{}}
-          className={classNames(
-            greyText ? classes.greyText : classes.whiteText,
-            classes.textContainer
-          )}
-        >
+      <div className={classes.textSection}>
+        <div className={classNames(classes.textContainer)}>
           <div className={classes.title}>
             <Typography
               variant="h5"
