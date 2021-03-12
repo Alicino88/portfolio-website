@@ -91,9 +91,10 @@ const Home = () => {
             I am a junior front-end developer based in Helsinki. I've made this
             website to share my{" "}
             {/* is it possible to use here NavLink instead of <a> ? I'm not sure about it */}
-            <a href="/Work" style={{ color: "#30BCED", fontWeight: "700" }}>
+            {/*yes it is possible and apparently it's the best practice as using the <a> element triggers a complete page referesh according to here https://stackoverflow.com/questions/53862705/difference-between-html-tag-href-and-navlink-or-link*/}}
+            <NavLink to="/Work" style={{ color: "#30BCED", fontWeight: "700" }}>
               work
-            </a>{" "}
+            </NavLink>{" "}
             and{" "}
             <a
               href="https://github.com/Alicino88?tab=repositories"
