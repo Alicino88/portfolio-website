@@ -1,6 +1,7 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
+import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   homeContainer: {
@@ -90,9 +91,14 @@ const Home = () => {
           >
             I am a junior front-end developer based in Helsinki. I've made this
             website to share my{" "}
-            <a href="/Work" style={{ color: "#30BCED", fontWeight: "700" }}>
+            {
+              {
+                /*below instead of NavLink I could have used the a element but this would trigger an entire page refresh  https://stackoverflow.com/questions/53862705/difference-between-html-tag-href-and-navlink-or-link*/
+              }
+            }
+            <NavLink to="/Work" style={{ color: "#30BCED", fontWeight: "700" }}>
               work
-            </a>{" "}
+            </NavLink>{" "}
             and{" "}
             <a
               href="https://github.com/Alicino88?tab=repositories"
