@@ -6,7 +6,7 @@ import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { NavLink } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
-import Divider from "@material-ui/core/Divider";
+
 const useStyles = makeStyles({
   backgroundStyle: {
     backgroundColor: "#050401",
