@@ -90,6 +90,7 @@ const Home = () => {
           >
             I am a junior front-end developer based in Helsinki. I've made this
             website to share my{" "}
+            {/* is it possible to use here NavLink instead of <a> ? I'm not sure about it */}
             <a href="/Work" style={{ color: "#30BCED", fontWeight: "700" }}>
               work
             </a>{" "}
