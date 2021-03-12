@@ -35,52 +35,29 @@ const useStyles = makeStyles((theme) => ({
 
 const NavBar = () => {
   const classes = useStyles();
+  const linkList = [
+    { title: "Home", to: "/" },
+    { title: "About", to: "/About" },
+    { title: "Work", to: "/Work" },
+    { title: "Contact", to: "/Contact" },
+  ];
 
   return (
     //added position static as by default React puts fixed position which takes the menu out from the normal page flow
     <AppBar className={classes.appBarStyle} position="static" elevation="0">
       <Toolbar className={classes.toolbarStyle}>
-        <Typography>
-          <NavLink
-            exact
-            className={classes.links}
-            activeClassName={classes.linkActive}
-            to="/"
-          >
-            Home
-          </NavLink>
-        </Typography>
-        <Typography>
-          <NavLink
-            exact
-            className={classes.links}
-            activeClassName={classes.linkActive}
-            /*when the link is equal to the path in the app component then the component is rendered*/
-            to="/About"
-          >
-            About
-          </NavLink>
-        </Typography>
-        <Typography>
-          <NavLink
-            exact
-            className={classes.links}
-            activeClassName={classes.linkActive}
-            to="/Work"
-          >
-            Work
-          </NavLink>
-        </Typography>
-        <Typography>
-          <NavLink
-            exact
-            className={classes.links}
-            activeClassName={classes.linkActive}
-            to="/Contact"
-          >
-            Contact
-          </NavLink>
-        </Typography>
+        {linkList.map((link) => (
+          <Typography>
+            <NavLink
+              exact
+              className={classes.links}
+              activeClassName={classes.linkActive}
+              to={link.to}
+            >
+              {link.title}
+            </NavLink>
+          </Typography>
+        ))}
       </Toolbar>
     </AppBar>
   );

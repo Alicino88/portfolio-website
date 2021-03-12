@@ -91,11 +91,7 @@ const Home = () => {
           >
             I am a junior front-end developer based in Helsinki. I've made this
             website to share my{" "}
-            {
-              {
-                /*below instead of NavLink I could have used the a element but this would trigger an entire page refresh  https://stackoverflow.com/questions/53862705/difference-between-html-tag-href-and-navlink-or-link*/
-              }
-            }
+            {/*below instead of NavLink I could have used the a element but this would trigger an entire page refresh  https://stackoverflow.com/questions/53862705/difference-between-html-tag-href-and-navlink-or-link*/}
             <NavLink to="/Work" style={{ color: "#30BCED", fontWeight: "700" }}>
               work
             </NavLink>{" "}

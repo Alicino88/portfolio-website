@@ -46,6 +46,13 @@ const MobileMenu = () => {
     setShowMewnu(false);
   };
 
+  const linkList = [
+    { title: "Home", to: "/" },
+    { title: "About", to: "/About" },
+    { title: "Work", to: "/Work" },
+    { title: "Contact", to: "/Contact" },
+  ];
+
   let menu;
 
   if (showmenu) {
@@ -67,50 +74,18 @@ const MobileMenu = () => {
             marginTop: "30px",
           }}
         >
-          <Typography>
-            <NavLink
-              exact
-              className={classes.links}
-              to="/"
-              onClick={() => closeMenu()}
-            >
-              Home
-            </NavLink>
-          </Typography>
-
-          <Typography>
-            <NavLink
-              exact
-              className={classes.links}
-              /*when the link is equal to the path in the app component then the component is rendered*/
-              to="/About"
-              onClick={() => closeMenu()}
-            >
-              About
-            </NavLink>
-          </Typography>
-
-          <Typography>
-            <NavLink
-              exact
-              className={classes.links}
-              to="/Work"
-              onClick={() => closeMenu()}
-            >
-              Work
-            </NavLink>
-          </Typography>
-
-          <Typography>
-            <NavLink
-              exact
-              className={classes.links}
-              to="/Contact"
-              onClick={() => closeMenu()}
-            >
-              Contact
-            </NavLink>
-          </Typography>
+          {linkList.map((link) => (
+            <Typography>
+              <NavLink
+                exact
+                className={classes.links}
+                to={link.to}
+                onClick={() => closeMenu()}
+              >
+                {link.title}
+              </NavLink>
+            </Typography>
+          ))}
         </div>
       </AppBar>
     );
