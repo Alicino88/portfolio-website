@@ -1,5 +1,6 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   backgroundPicture: {
@@ -46,51 +47,61 @@ const AboutText = () => {
   return (
     <div className={classes.backgroundPicture}>
       <div className={classes.textContainer}>
-        <Typography
-          variant="h4"
-          color="h2"
-          style={{
-            marginBottom: "30px",
-            fontWeight: "600",
-            fontFamily: "montserrat",
-          }}
-        >
-          How I become a frontend developer
-        </Typography>
-        <Typography
-          variant="h5"
-          component="h2"
-          style={{ letterSpacing: "1px", lineHeight: "1.5" }}
-        >
-          Two years ago, in the darkness of the Finnish winter, I found my
-          light. My son was born on February 27th. As crazy as it sounds, it was
-          during my maternity leave that I decided to give a try to coding and,
-          eventually, I fell in love with it.{" "}
-        </Typography>
-        <Typography
-          variant="h5"
-          component="h2"
-          style={{ letterSpacing: "1px", lineHeight: "1.5", marginTop: "20px" }}
-        >
-          In a few months I completed two online certifications in web
-          development and programming and, after my time at home with my little
-          bundle of joy, I landed a 5-month traineeship as a front-end
-          developer.
-        </Typography>
-        <Typography
-          variant="h5"
-          component="h2"
-          style={{ letterSpacing: "1px", lineHeight: "1.5", marginTop: "20px" }}
-        >
-          In the past couple of years, I gained hands-on experience with the
-          following technologies:{" "}
-          <span
-            style={{ borderBottom: "2px solid #30BCED", fontWeight: "600" }}
+        <Fade bottom>
+          <Typography
+            variant="h4"
+            color="h2"
+            style={{
+              marginBottom: "30px",
+              fontWeight: "600",
+              fontFamily: "montserrat",
+            }}
           >
-            Javascript, Html, Css, React, and Vue
-          </span>
-          . The website you are looking at is my latest project.
-        </Typography>
+            How I become a frontend developer
+          </Typography>
+          <Typography
+            variant="h5"
+            component="h2"
+            style={{ letterSpacing: "1px", lineHeight: "1.5" }}
+          >
+            Two years ago, in the darkness of the Finnish winter, I found my
+            light. My son was born on February 27th. As crazy as it sounds, it
+            was during my maternity leave that I decided to give a try to coding
+            and, eventually, I fell in love with it.{" "}
+          </Typography>
+          <Typography
+            variant="h5"
+            component="h2"
+            style={{
+              letterSpacing: "1px",
+              lineHeight: "1.5",
+              marginTop: "20px",
+            }}
+          >
+            In a few months I completed two online certifications in web
+            development and programming and, after my time at home with my
+            little bundle of joy, I landed a 5-month traineeship as a front-end
+            developer.
+          </Typography>
+          <Typography
+            variant="h5"
+            component="h2"
+            style={{
+              letterSpacing: "1px",
+              lineHeight: "1.5",
+              marginTop: "20px",
+            }}
+          >
+            In the past couple of years, I gained hands-on experience with the
+            following technologies:{" "}
+            <span
+              style={{ borderBottom: "2px solid #30BCED", fontWeight: "600" }}
+            >
+              Javascript, Html, Css, React, and Vue
+            </span>
+            . The website you are looking at is my latest project.
+          </Typography>
+        </Fade>
       </div>
     </div>
   );

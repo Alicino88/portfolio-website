@@ -1,6 +1,7 @@
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   projectContainer: {
@@ -129,18 +130,22 @@ const Singleproject = ({
       <div className={classes.textSection}>
         <div className={classNames(classes.textContainer)}>
           <div className={classes.title}>
-            <Typography
-              variant="h5"
-              component="h2"
-              style={{ fontFamily: "montserrat", fontWeight: "600" }}
-            >
-              {title}
-            </Typography>
+            <Fade bottom>
+              <Typography
+                variant="h5"
+                component="h2"
+                style={{ fontFamily: "montserrat", fontWeight: "600" }}
+              >
+                {title}
+              </Typography>
+            </Fade>
           </div>
           <div className={classes.text}>
-            <Typography variant="h6" component="h3">
-              {text}
-            </Typography>
+            <Fade bottom>
+              <Typography variant="h6" component="h3">
+                {text}
+              </Typography>
+            </Fade>
           </div>
         </div>
       </div>

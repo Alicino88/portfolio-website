@@ -2,6 +2,7 @@ import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
 import { NavLink } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
   homeContainer: {
@@ -75,37 +76,42 @@ const Home = () => {
     >
       <div className={classes.homeContainer}>
         <div className={classes.textContainer}>
-          <Typography
-            variant="h1"
-            component="h1"
-            className={classes.titleStyle}
-          >
-            Hi, my name is Alice.
-          </Typography>
-
-          <Typography
-            variant="h3"
-            component="h1"
-            fontWeight="fontWeightLight"
-            className={classes.textStyle}
-          >
-            I am a junior front-end developer based in Helsinki. I've made this
-            website to share my{" "}
-            {/*below instead of NavLink I could have used the a element but this would trigger an entire page refresh  https://stackoverflow.com/questions/53862705/difference-between-html-tag-href-and-navlink-or-link*/}
-            <NavLink to="/Work" style={{ color: "#30BCED", fontWeight: "700" }}>
-              work
-            </NavLink>{" "}
-            and{" "}
-            <a
-              href="https://github.com/Alicino88?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#30BCED", fontWeight: "700" }}
+          <Fade left cascade>
+            <Typography
+              variant="h1"
+              component="h1"
+              className={classes.titleStyle}
             >
-              coding journey
-            </a>{" "}
-            with you.
-          </Typography>
+              Hi, my name is Alice.
+            </Typography>
+
+            <Typography
+              variant="h3"
+              component="h1"
+              fontWeight="fontWeightLight"
+              className={classes.textStyle}
+            >
+              I am a junior front-end developer based in Helsinki. I've made
+              this website to share my{" "}
+              {/*below instead of NavLink I could have used the a element but this would trigger an entire page refresh  https://stackoverflow.com/questions/53862705/difference-between-html-tag-href-and-navlink-or-link*/}
+              <NavLink
+                to="/Work"
+                style={{ color: "#30BCED", fontWeight: "700" }}
+              >
+                work
+              </NavLink>{" "}
+              and{" "}
+              <a
+                href="https://github.com/Alicino88?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#30BCED", fontWeight: "700" }}
+              >
+                coding journey
+              </a>{" "}
+              with you.
+            </Typography>
+          </Fade>
         </div>
       </div>
       <Divider className={classes.dividerStyle} />
