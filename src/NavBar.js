@@ -36,18 +36,18 @@ const useStyles = makeStyles((theme) => ({
 const NavBar = () => {
   const classes = useStyles();
   const linkList = [
-    { title: "Home", to: "/" },
-    { title: "About", to: "/About" },
-    { title: "Work", to: "/Work" },
-    { title: "Contact", to: "/Contact" },
+    { id: 1, title: "Home", to: "/" },
+    { id: 2, title: "About", to: "/About" },
+    { id: 3, title: "Work", to: "/Work" },
+    { id: 4, title: "Contact", to: "/Contact" },
   ];
 
   return (
     //added position static as by default React puts fixed position which takes the menu out from the normal page flow
-    <AppBar className={classes.appBarStyle} position="static" elevation="0">
+    <AppBar className={classes.appBarStyle} position="static">
       <Toolbar className={classes.toolbarStyle}>
         {linkList.map((link) => (
-          <Typography>
+          <Typography key={link.id}>
             <NavLink
               exact
               className={classes.links}

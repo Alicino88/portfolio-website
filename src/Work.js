@@ -8,6 +8,7 @@ import LandingPage from "./images/lando.png";
 const Work = () => {
   let projectsContent = [
     {
+      id: 1,
       title: "React Users Page",
       picture: ReactUsers,
       alt: "React Users Page",
@@ -16,6 +17,7 @@ const Work = () => {
         "A small React application fetching users data from an external API via Axios and using useState, useEffect, useParams hooks.",
     },
     {
+      id: 2,
       title: "TrueMed Services Page",
       picture: Truemed,
       alt: "TrueMed Services Page",
@@ -24,6 +26,7 @@ const Work = () => {
         "A page developed with Vue and Vuetify UI library. This project was part of my last traineeship as a front-end developer.",
     },
     {
+      id: 3,
       title: "Crostata Cake Website",
       picture: Crostata,
       alt: "Crostata Cake Website",
@@ -32,6 +35,7 @@ const Work = () => {
         "One of my first websites developed with pure HTML and CSS. I wanted to include it in my portfolio as I really like the graphics.",
     },
     {
+      id: 4,
       title: "Product Landing Page",
       picture: LandingPage,
       alt: "Product Landing Page",
@@ -47,6 +51,7 @@ const Work = () => {
 
       {projectsContent.map((content) => (
         <SingleProject
+          key={content.id}
           title={content.title}
           text={content.text}
           picture={content.picture}
