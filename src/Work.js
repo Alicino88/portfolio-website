@@ -12,7 +12,7 @@ const Work = () => {
       title: "React Users Page",
       picture: ReactUsers,
       alt: "React Users Page",
-      link: "https://react-users-page2.netlify.app/",
+      link: "https://react-userspage.netlify.app/",
       text:
         "A small React application fetching users data from an external API via Axios and using useState, useEffect, useParams hooks.",
     },
