@@ -93,12 +93,13 @@ const AboutText = () => {
               marginTop: "20px",
             }}
           >
-            In the past couple of years, I have gained hands-on experience with
-            the following technologies:{" "}
+            Over the past couple of years, I have gained hands-on experience
+            with the following technologies:{" "}
             <span
               style={{ borderBottom: "2px solid #30BCED", fontWeight: "600" }}
             >
-              Javascript, React, Gatsby, Vue, Html and Css.
+              Javascript, React, Gatsby, Vue, Html, Css, and Figma as a design
+              tool.
             </span>{" "}
             Whenever I have time, I enjoy writing about coding on my{" "}
             <a
