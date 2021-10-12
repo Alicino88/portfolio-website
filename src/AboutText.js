@@ -104,6 +104,7 @@ const AboutText = () => {
             <a
               href="https://www.aliceiscoding.com/"
               rel="noopener noreferrer"
+              target="_blank"
               style={{
                 textDecoration: "none",
                 color: "#30BCED",
