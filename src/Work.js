@@ -4,11 +4,21 @@ import Crostata from "./images/crostata.png";
 import Truemed from "./images/truemed3.png";
 import ReactUsers from "./images/react_users1.png";
 import LandingPage from "./images/lando.png";
+import GatsbyBlog from "./images/gatsby_blog.png";
 
 const Work = () => {
   let projectsContent = [
     {
       id: 1,
+      title: "Gatbsy.js blog",
+      picture: GatsbyBlog,
+      alt: "Gatsby blog",
+      link: "https://www.aliceiscoding.com/",
+      text:
+        "My personal blog where I have fun writing about frontend developement. The website is made with Gatsby.js using Contentful as CMS.",
+    },
+    {
+      id: 2,
       title: "React Users Page",
       picture: ReactUsers,
       alt: "React Users Page",
@@ -17,7 +27,7 @@ const Work = () => {
         "A small React application fetching users data from an external API via Axios and using useState, useEffect, useParams hooks.",
     },
     {
-      id: 2,
+      id: 3,
       title: "TrueMed Services Page",
       picture: Truemed,
       alt: "TrueMed Services Page",
@@ -26,7 +36,7 @@ const Work = () => {
         "A page developed with Vue and Vuetify UI library. This project was part of my last traineeship as a front-end developer.",
     },
     {
-      id: 3,
+      id: 4,
       title: "Crostata Cake Website",
       picture: Crostata,
       alt: "Crostata Cake Website",
@@ -35,7 +45,7 @@ const Work = () => {
         "One of my first websites developed with pure HTML and CSS. I wanted to include it in my portfolio as I really like the graphics.",
     },
     {
-      id: 4,
+      id: 5,
       title: "Product Landing Page",
       picture: LandingPage,
       alt: "Product Landing Page",
