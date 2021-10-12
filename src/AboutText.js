@@ -99,9 +99,17 @@ const AboutText = () => {
               style={{ borderBottom: "2px solid #30BCED", fontWeight: "600" }}
             >
               Javascript, React, Gatsby, Vue, Html and Css.
-            </span>
-            . Whenever I have time, I enjoy writing about coding on my{" "}
-            <a href="https://www.aliceiscoding.com/" rel="noopener noreferrer">
+            </span>{" "}
+            Whenever I have time, I enjoy writing about coding on my{" "}
+            <a
+              href="https://www.aliceiscoding.com/"
+              rel="noopener noreferrer"
+              style={{
+                textDecoration: "none",
+                color: "#30BCED",
+                fontWeight: "600",
+              }}
+            >
               personal blog
             </a>
             .
