@@ -4,7 +4,7 @@ import Crostata from "./images/crostata.png";
 import Truemed from "./images/truemed3.png";
 import ReactUsers from "./images/react_users1.png";
 import LandingPage from "./images/lando.png";
-import GatsbyBlog from "./images/gatsby_blog.png";
+import GatsbyBlog from "./images/gatsby_blog.PNG";
 
 const Work = () => {
   let projectsContent = [
