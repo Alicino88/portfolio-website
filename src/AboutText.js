@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 const useStyles = makeStyles((theme) => ({
   backgroundPicture: {
     backgroundImage:
-      'url("https://cdn.pixabay.com/photo/2015/10/12/14/59/milky-way-984050_1280.jpg")',
+      'url("https://cdn.pixabay.com/photo/2014/09/19/00/14/milky-way-451599_1280.jpg")',
     height: "auto",
     backgroundRepeat: "noRepeat",
     backgroundSize: "cover",
