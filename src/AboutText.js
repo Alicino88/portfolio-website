@@ -65,10 +65,10 @@ const AboutText = () => {
             style={{ letterSpacing: "1px", lineHeight: "1.5" }}
           >
             For years I have been working in digital marketing and copywriting,
-            first in Italy and then in Finland. Then, one day, I got really
-            intrigued at the idea that I could build something beautiful with
-            code. It was a month before my first son was born when my journey
-            into frontend development began.{" "}
+            first in Italy and then in Finland. Then, one day, I got intrigued
+            by the idea that I could build something beautiful with code. It was
+            a month before my first son was born when my journey into frontend
+            development began.{" "}
           </Typography>
           <Typography
             variant="h5"
@@ -81,8 +81,8 @@ const AboutText = () => {
           >
             While having fun dealing with a baby, I have completed two online
             certifications in web development and programming and, after my time
-            at home with my little bundle of joy, I landed a 5-month traineeship
-            as a front-end developer.
+            at home with my little bundle of joy was over, I landed a 5-month
+            traineeship as a front-end developer.
           </Typography>
           <Typography
             variant="h5"
@@ -98,10 +98,11 @@ const AboutText = () => {
             <span
               style={{ borderBottom: "2px solid #30BCED", fontWeight: "600" }}
             >
-              Javascript, React, Gatsby, Vue, Html, Css, and Figma as a design
-              tool.
+              Javascript, React, Gatsby, Vue, Html, Css, Contentful, GraphQL,
+              and Figma as a design tool.
             </span>{" "}
-            Whenever I have time, I enjoy writing about coding on my{" "}
+            I am now on maternity leave with my second child and, whenever I
+            have time, I code and write about coding on my{" "}
             <a
               href="https://www.aliceiscoding.com/"
               rel="noopener noreferrer"
@@ -112,7 +113,7 @@ const AboutText = () => {
                 fontWeight: "600",
               }}
             >
-              personal blog
+              blog
             </a>
             .
           </Typography>
