@@ -62,9 +62,7 @@ const Footer = () => {
           <li style={{ paddingLeft: "30px", paddingTop: "4px" }}>
             <GitHubIcon
               style={{ fontSize: 30, cursor: "pointer" }}
-              onClick={() =>
-                window.open("https://github.com/Alicino88?tab=repositories")
-              }
+              onClick={() => window.open("https://github.com/Alicino88")}
             />
           </li>
         </ul>

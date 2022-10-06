@@ -102,7 +102,7 @@ const Home = () => {
               </NavLink>{" "}
               and{" "}
               <a
-                href="https://github.com/Alicino88?tab=repositories"
+                href="https://github.com/Alicino88"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "#30BCED", fontWeight: "700" }}
