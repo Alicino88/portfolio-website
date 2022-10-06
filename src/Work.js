@@ -6,9 +6,9 @@ import ReactUsers from "./images/react_users1.png";
 import LandingPage from "./images/lando.png";
 import GatsbyBlog from "./images/gatsby_blog.PNG";
 import Wedding from "./images/wedding.PNG";
-import ToDo from "./images/react-todo.PNG";
-import FoodApp from "./images/react-food-app.PNG";
-import ExpenseTracker from "./images/react-expense-tracker.PNG";
+import ToDo from "./images/react-todo.png";
+import FoodApp from "./images/react-food-app.png";
+import ExpenseTracker from "./images/react-expense-tracker.png";
 const Work = () => {
   let projectsContent = [
     {
