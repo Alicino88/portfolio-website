@@ -57,52 +57,36 @@ const AboutText = () => {
               fontFamily: "montserrat",
             }}
           >
-            How I become a frontend developer
+            My journey as a frontend developer
           </Typography>
           <Typography
             variant="h5"
             component="h2"
             style={{ letterSpacing: "1px", lineHeight: "1.5" }}
           >
-            For years I have been working in digital marketing and copywriting,
-            first in Italy and then in Finland. Then, one day, I got intrigued
-            by the idea that I could build something beautiful with code. It was
-            a month before my first son was born when my journey into frontend
-            development began.{" "}
-          </Typography>
-          <Typography
-            variant="h5"
-            component="h2"
-            style={{
-              letterSpacing: "1px",
-              lineHeight: "1.5",
-              marginTop: "20px",
-            }}
-          >
-            While having fun dealing with a baby, I have completed two online
-            certifications in web development and programming and, after my time
-            at home with my little bundle of joy was over, I landed a 5-month
-            traineeship as a front-end developer.
-          </Typography>
-          <Typography
-            variant="h5"
-            component="h2"
-            style={{
-              letterSpacing: "1px",
-              lineHeight: "1.5",
-              marginTop: "20px",
-            }}
-          >
-            Over the past couple of years, I have gained hands-on experience
-            with the following technologies:{" "}
+            I have hands-on experience with the following frontend languages and
+            frameworks:{" "}
             <span
               style={{ borderBottom: "2px solid #30BCED", fontWeight: "600" }}
             >
               Javascript, React, Gatsby, Vue, Html, Css, Contentful, GraphQL,
               and Figma as a design tool.
             </span>{" "}
-            I am now on maternity leave with my second child and, whenever I
-            have time, I code and write about coding on my{" "}
+          </Typography>
+
+          <Typography
+            variant="h5"
+            component="h2"
+            style={{
+              letterSpacing: "1px",
+              lineHeight: "1.5",
+              marginTop: "20px",
+            }}
+          >
+            I love learning and solving coding challenges. Currently, I am
+            focusing on deepening my React knowledge by following the course
+            "React the Complete Guide" on Udemy. Also, whenever I have time, I
+            write on my{" "}
             <a
               href="https://www.aliceiscoding.com/"
               rel="noopener noreferrer"
@@ -114,8 +98,57 @@ const AboutText = () => {
               }}
             >
               blog
-            </a>
-            .
+            </a>{" "}
+            about front-end development topics.
+          </Typography>
+
+          <Typography
+            variant="h5"
+            component="h2"
+            style={{
+              letterSpacing: "1px",
+              lineHeight: "1.5",
+              marginTop: "20px",
+            }}
+          >
+            So far I have completed the following certifications:
+            <ul>
+              <li>Responsive Web Design - FreeCodeCamp</li>
+              <li>
+                Introduction to Web Development and Programming - FITech Network
+                University
+              </li>
+              <li>Gatsby v3 Tutorial and Project Course - Udemy</li>
+              <li>Complete Intro to React - Frontend Masters</li>
+            </ul>{" "}
+          </Typography>
+          <Typography
+            variant="h5"
+            component="h2"
+            style={{
+              letterSpacing: "1px",
+              lineHeight: "1.5",
+              marginTop: "20px",
+            }}
+          >
+            My journey into frontend development started three years ago while
+            being on maternity leave with my first child. When the time at home
+            with my son was over, I landed an internship as a front-end
+            developer and got accepted into a full-stack developer program.
+            Despite some challenges and the arrival of a second child, I kept
+            coding to expand my skills and portfolio.
+          </Typography>
+          <Typography
+            variant="h5"
+            component="h2"
+            style={{
+              letterSpacing: "1px",
+              lineHeight: "1.5",
+              marginTop: "20px",
+            }}
+          >
+            I am now looking forward to joining a team of motivated tech
+            professionals to build top-notch digital solutions
           </Typography>
         </Fade>
       </div>
