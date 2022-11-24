@@ -9,10 +9,19 @@ import Wedding from "./images/wedding.PNG";
 import ToDo from "./images/react-todo.png";
 import FoodApp from "./images/react-food-app.png";
 import ExpenseTracker from "./images/react-expense-tracker.png";
+import Quiz from "./images/quiz.png";
 const Work = () => {
   let projectsContent = [
     {
       id: 1,
+      title: "React & TypeScript Quiz Game",
+      picture: Quiz,
+      alt: "React & TypeScript Quiz Game",
+      link: "https://tourmaline-dolphin-129e5b.netlify.app/",
+      text: "A fun project I have built using React, TypeScript, and styled-components. Trivia API is used to fetch the questions and error handling is implemented. Try it!",
+    },
+    {
+      id: 2,
       title: "Gatbsy.js Blog",
       picture: GatsbyBlog,
       alt: "Gatsby blog",
@@ -21,7 +30,7 @@ const Work = () => {
     },
 
     {
-      id: 2,
+      id: 3,
       title: "React ToDo App",
       picture: ToDo,
       alt: "React ToDo App",
@@ -29,7 +38,7 @@ const Work = () => {
       text: "A todo app I have made with React and Bootstrap. The user can add, filter and delete todos. The todos are sorted by closest due date and the forms have validation logic implemented.",
     },
     {
-      id: 3,
+      id: 4,
       title: "React Food Order App",
       picture: FoodApp,
       alt: "React Food Order App",
@@ -38,7 +47,7 @@ const Work = () => {
     },
 
     {
-      id: 4,
+      id: 5,
       title: "Gatsby.js Wedding Website",
       picture: Wedding,
       alt: "wedding website",
@@ -46,7 +55,7 @@ const Work = () => {
       text: "A wedding website I have designed with Figma and implemented with Gatsby.js. The project includes Lottie animated icons and a countdown built with vanilla javascript.",
     },
     {
-      id: 5,
+      id: 6,
       title: "React Expense Tracker",
       picture: ExpenseTracker,
       alt: "React Expense Tracker",
@@ -55,7 +64,7 @@ const Work = () => {
     },
 
     {
-      id: 6,
+      id: 7,
       title: "React Users Page",
       picture: ReactUsers,
       alt: "React Users Page",
@@ -63,7 +72,7 @@ const Work = () => {
       text: "A small React application fetching users data from an external API via Axios and using useState, useEffect, useParams hooks.",
     },
     {
-      id: 7,
+      id: 8,
       title: "TrueMed Services Page",
       picture: Truemed,
       alt: "TrueMed Services Page",
@@ -71,7 +80,7 @@ const Work = () => {
       text: "A page developed with Vue and Vuetify UI library. This project was part of my last traineeship as a front-end developer.",
     },
     {
-      id: 8,
+      id: 9,
       title: "Crostata Cake Website",
       picture: Crostata,
       alt: "Crostata Cake Website",
@@ -79,7 +88,7 @@ const Work = () => {
       text: "One of my first websites developed with pure HTML and CSS. I wanted to include it in my portfolio as I really like the graphics.",
     },
     {
-      id: 9,
+      id: 10,
       title: "Product Landing Page",
       picture: LandingPage,
       alt: "Product Landing Page",
