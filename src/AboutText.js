@@ -69,8 +69,8 @@ const AboutText = () => {
             <span
               style={{ borderBottom: "2px solid #30BCED", fontWeight: "600" }}
             >
-              Javascript, React, Gatsby, Vue, Html, Css, Contentful, GraphQL,
-              and Figma as a design tool.
+              Javascript, React, TypeScript, Gatsby, Vue, Html, Css, Contentful,
+              GraphQL, and Figma as a design tool.
             </span>{" "}
           </Typography>
 
@@ -111,7 +111,21 @@ const AboutText = () => {
               marginTop: "20px",
             }}
           >
-            So far I have completed the following certifications:
+            Before diving into code, I have worked for several years in digital
+            marketing and gathered experience with HubSpot, email marketing, CRM
+            workflows, and copywriting.
+          </Typography>
+
+          <Typography
+            variant="h5"
+            component="h2"
+            style={{
+              letterSpacing: "1px",
+              lineHeight: "1.5",
+              marginTop: "20px",
+            }}
+          >
+            So far I have completed the following code-related certifications:
             <ul>
               <li>Responsive Web Design - FreeCodeCamp</li>
               <li>
@@ -148,7 +162,8 @@ const AboutText = () => {
             }}
           >
             I am now looking forward to joining a team of motivated tech
-            professionals to build top-notch digital solutions
+            professionals to make the most of my digital marketing and coding
+            skills.
           </Typography>
         </Fade>
       </div>
