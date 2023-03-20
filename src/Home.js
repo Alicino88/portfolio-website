@@ -91,8 +91,8 @@ const Home = () => {
               fontWeight="fontWeightLight"
               className={classes.textStyle}
             >
-              I am a junior front-end developer with a digital marketing
-              background. I've made this website to share my{" "}
+              I am a front-end developer with a digital marketing background.
+              I've made this website to share my{" "}
               {/*below instead of NavLink I could have used the a element but this would trigger an entire page refresh  https://stackoverflow.com/questions/53862705/difference-between-html-tag-href-and-navlink-or-link*/}
               <NavLink
                 to="/Work"

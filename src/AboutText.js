@@ -69,8 +69,8 @@ const AboutText = () => {
             <span
               style={{ borderBottom: "2px solid #30BCED", fontWeight: "600" }}
             >
-              Javascript, React, TypeScript, Gatsby, Vue, Html, Css, Contentful,
-              GraphQL, and Figma as a design tool.
+              Javascript, React, TypeScript, Gatsby, Vue, Html, Css, Tailwind,
+              Contentful, Prismic, GraphQL, and Figma as a design tool.
             </span>{" "}
           </Typography>
 
@@ -84,9 +84,8 @@ const AboutText = () => {
             }}
           >
             I love learning and solving coding challenges. Currently, I am
-            focusing on deepening my React knowledge by following the course
-            "React the Complete Guide" on Udemy. Also, whenever I have time, I
-            write on my{" "}
+            working as a freelance web developer with Gatsby and, whenever I
+            have time, I write on my{" "}
             <a
               href="https://www.aliceiscoding.com/"
               rel="noopener noreferrer"
@@ -127,6 +126,9 @@ const AboutText = () => {
           >
             So far I have completed the following code-related certifications:
             <ul>
+              <li>
+                React the Complete Guide - with Redux and Typescript - Udemy
+              </li>
               <li>Responsive Web Design - FreeCodeCamp</li>
               <li>
                 Introduction to Web Development and Programming - FITech Network
